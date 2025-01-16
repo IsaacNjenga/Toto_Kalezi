@@ -6,7 +6,7 @@ function Home() {
     <>
       <Navbar />
       <div>
-        <img src={logo} />
+        <img src={logo} alt="logo" />
       </div>
       <div>
         <h1>Home</h1>

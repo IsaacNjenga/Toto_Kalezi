@@ -32,6 +32,7 @@ function Navbar() {
   }, []);
 
   const toggleMenu = () => {
+    console.log("clicked");
     setMenuOpen(!menuOpen);
   };
 
@@ -76,41 +77,42 @@ function Navbar() {
                 <div></div>
                 <div></div>
               </div>
-            </div>
-
-            <div className="nav-links">
-              <ul>
-                <li>
-                  {" "}
-                  <Link to="/" className="nav-link">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link to="/about" className="nav-link">
-                    About
-                  </Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link to="/contact" className="nav-link">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link to="/give" className="nav-link">
-                    Give
-                  </Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link to="/causes" className="nav-link">
-                    Causes
-                  </Link>
-                </li>
-              </ul>
+            </div>{" "}
+            <div className={`links ${menuOpen ? "active" : ""}`}>
+              <div className="nav-links">
+                <ul>
+                  <li>
+                    {" "}
+                    <Link to="/" className="nav-link">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/about" className="nav-link">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/contact" className="nav-link">
+                      Contact
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/give" className="nav-link">
+                      Give
+                    </Link>
+                  </li>
+                  <li>
+                    {" "}
+                    <Link to="/causes" className="nav-link">
+                      Causes
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div>
               <div className="contact-info">
