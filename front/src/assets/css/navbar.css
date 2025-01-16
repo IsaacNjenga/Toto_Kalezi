@@ -1,0 +1,263 @@
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(235, 22, 22, 0);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 10px;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.additional-info {
+  background: linear-gradient(
+    to left,
+    rgba(209, 212, 23, 0.274),
+    rgba(42, 10, 170, 0.508)
+  );
+  display: flex;
+  justify-content: space-between; /* Aligns text on the left and icons on the right */
+  align-items: center; /* Vertically aligns items */
+  padding: 0 30px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-text p {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: white;
+}
+.additional-info-icons {
+  font-size: 1rem;
+  display: flex;
+  gap: 15px; /* Adds consistent spacing between icons */
+}
+
+.mail-icon,
+.clock-icon {
+  padding-right: 5px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+.facebook-icon {
+  color: white;
+  background-color: #316ff6;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.youtube-icon {
+  color: red;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.twitter-icon {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.insta-icon {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(28, 227, 21, 0);
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 90px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #366968;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links ul {
+  padding: 0;
+
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #009921;
+}
+
+.phone-icon {
+  font-size: 1rem;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.contact-info {
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 20px;
+  gap: 25px;
+}
+
+.navbar-donate-btn {
+  margin: auto;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #009921;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-donate-btn:hover {
+  background-color: #007b1c;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(233, 221, 221);
+  margin: 4px 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.navbar.scrolled .hamburger div {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    background-color: rgba(181, 165, 165, 0.33); /* Ensures visibility */
+  }
+
+  .additional-info {
+    align-items: flex-start;
+    padding: 10px;
+    gap: 2px; /* Adds spacing between sections */
+  }
+
+  .info-text {
+    flex-direction: column;
+    gap: 5px; /* Adds spacing between text items */
+  }
+
+  .additional-info-icons {
+    justify-content: flex-start;
+    gap: 10px; /* Reduces spacing between icons */
+    font-size: 0.9rem; /* Scales down icons slightly */
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Adds space between logo image and text */
+  }
+
+  .logo-image {
+    width: 70px; /* Scales down the logo image */
+    height: 70px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Adjusts text size for smaller screens */
+  }
+
+  .hamburger {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between links */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-links li {
+    width: 100%; /* Makes links easier to tap */
+    text-align: center; /* Centers text */
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Adds spacing between contact details */
+    font-size: 0.9rem; /* Scales down the text */
+  }
+
+  .navbar-donate-btn {
+    width: 100%; /* Makes the button full-width */
+    text-align: center;
+    padding: 10px; /* Adjusts padding for smaller screens */
+    font-size: 1rem;
+  }
+}
