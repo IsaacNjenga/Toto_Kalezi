@@ -202,11 +202,21 @@
   width: 100%;
 }
 
+.logo-image {
+  padding: 2px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.logo-image:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    margin: 10px 10px;
-    padding: 5px 30px;
+    margin: 12px 5px;
+    padding: 1px 20px;
     background-color: rgba(181, 165, 165, 0.33); /* Ensures visibility */
   }
 
@@ -229,7 +239,7 @@
 
   .main-nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 2px;
     width: 100%;
   }
@@ -237,10 +247,11 @@
   .logo {
     flex: 1;
     text-align: left;
+    margin-right: 18px;
   }
 
   .logo-image {
-    width: 50%; /* Scales down the logo image */
+    width: 60%; /* Scales down the logo image */
   }
 
   .logo-text {
@@ -268,6 +279,7 @@
 
   .links.active .nav-links {
     display: flex;
+    margin-top: 10px;
   }
 
   .links.active .nav-link {

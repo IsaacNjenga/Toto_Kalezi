@@ -51,6 +51,10 @@ function Navbar() {
   };
   const toInsta = () => {};
 
+  const toHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -97,7 +101,12 @@ function Navbar() {
             <div className="top-row">
               {" "}
               <div className="logo">
-                <img src={logo} alt="logo" className="logo-image" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="logo-image"
+                  onClick={toHome}
+                />
                 {/* <p className="logo-text">Toto Kalezi</p> */}
               </div>{" "}
               <div

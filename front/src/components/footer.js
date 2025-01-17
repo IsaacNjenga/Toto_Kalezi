@@ -46,6 +46,17 @@ function Footer() {
   const closeImage = () => {
     setOpenImage(null);
   };
+
+  const toFacebook = () => {
+    window.open("https://web.facebook.com/totokalezifoundation/?_rdc=1&_rdr#");
+  };
+
+  const toYoutube = () => {};
+  const toTwitter = () => {
+    window.open("https://x.com/totokalezi?s=11");
+  };
+  const toInsta = () => {};
+
   return (
     <footer>
       <div className="footer-background">
@@ -93,16 +104,16 @@ function Footer() {
               <p>Connect with us through our socials.</p>
               <div className="socials-icons">
                 <p>
-                  <FontAwesomeIcon icon={faYoutube} />
+                  <FontAwesomeIcon icon={faYoutube} onClick={toYoutube} />
                 </p>
                 <p>
-                  <FontAwesomeIcon icon={faFacebook} />
+                  <FontAwesomeIcon icon={faFacebook} onClick={toFacebook} />
                 </p>
                 <p>
-                  <FontAwesomeIcon icon={faXTwitter} />
+                  <FontAwesomeIcon icon={faXTwitter} onClick={toTwitter} />
                 </p>
                 <p>
-                  <FontAwesomeIcon icon={faInstagram} />
+                  <FontAwesomeIcon icon={faInstagram} onClick={toInsta} />
                 </p>
               </div>
             </div>
