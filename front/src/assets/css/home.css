@@ -9,7 +9,7 @@ html {
 
 .home-image {
   position: relative;
-  background: linear-gradient(rgba(91, 90, 90, 0), rgba(53, 155, 84, 0)),
+  background: linear-gradient(#281a7965, rgba(53, 155, 84, 0.234)),
     url("../images/home-bg.jpeg") no-repeat center center/cover;
   padding-bottom: 250px;
   padding-top: 200px;
@@ -17,8 +17,159 @@ html {
 }
 
 .home-content {
-  padding: 40px;
+  padding: 80px;
   margin-bottom: 65px;
+}
+
+.hero-subtitle {
+  color: #333;
+  display: flex; /* Ensures alignment properties work */
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
+  padding: 10px 20px; /* Adjust padding for better spacing */
+  margin: 20px auto; /* Center horizontally and reduce margins */
+  font-weight: 600;
+  background-color: #874a9a0b; /* Light background */
+  border-left: 4px solid #874a9a; /* Colored left border */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: fit-content; /* Shrinks the block to fit its content */
+  text-align: center;
+}
+
+.info-container {
+  display: flex;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 20px;
+  margin: 2px 25px;
+}
+
+.info-card {
+  border-radius: 15px;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.079);
+  background-color: white;
+  gap: 25px;
+  padding: 10px;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.04);
+  background-color: #874a9a46;
+  color: white;
+}
+
+.info-card p {
+  text-align: left;
+  font-size: 0.92rem;
+  margin: 10px;
+  color: #333;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.info-card h3 {
+  color: #333;
+}
+
+.info-card-icon {
+  width: 20%; /* Set a fixed width */
+  height: auto; /* Ensure the height matches the width */
+  margin: 5px;
+  border: 1px solid blue; /* Border styling */
+  padding: 10px; /* Padding around the content */
+  border-radius: 50%;
+}
+
+.call-to-action {
+  margin: 10px 20px;
+}
+
+.call-to-action-container {
+  margin: 20px 30px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(128, 0, 128, 0.128);
+  gap: 5px;
+}
+
+.call-to-action-card {
+  margin-bottom: 26px;
+
+  padding: 10px;
+}
+
+.dfsh {
+  border-right: 2px solid purple;
+  display: flex;
+}
+
+.call-to-action-card,
+.call-to-action-donation {
+  margin: 10px;
+  text-align: left;
+}
+
+.call-to-action-card h3 {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.call-to-action-card p {
+  color: #333;
+  margin-bottom: 30px;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.call-to-action-card h3,
+p {
+  margin: 10px 10px;
+}
+
+.call-to-action-card button {
+  align-self: right;
+  margin: 0px 10px;
+  color: white;
+  padding: 10px 26px;
+  background-color: #874a9a;
+  border-style: none;
+}
+
+.call-to-action-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.call-to-action-donation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call-to-action-donation-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.call-to-action-text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  color: white; /* Text color for contrast */
+  font-size: 2rem; /* Adjust font size as needed */
+  font-weight: bold; /* Make the text stand out */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+  text-align: center;
+  z-index: 1; /* Ensure text is on top of the image */
+}
+
+.volunteer-highlight {
+  color: #ffcc00; /* Highlight 'VOLUNTEER' with a different color */
 }
 
 .navbar-element {
@@ -28,4 +179,12 @@ html {
   z-index: 10;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
   /* backdrop-filter: blur(5px); */
+}
+
+@media screen and (max-width: 768px) {
+  .info-container,
+  .call-to-action-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
