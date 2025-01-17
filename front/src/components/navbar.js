@@ -10,7 +10,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/navbar.css";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/toto_kalezi_logo.png";
+import logo2 from "../assets/images/toto_logo.png";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -40,6 +41,16 @@ function Navbar() {
     navigate("/give");
   };
 
+  const toFacebook = () => {
+    window.open("https://web.facebook.com/totokalezifoundation/?_rdc=1&_rdr#");
+  };
+
+  const toYoutube = () => {};
+  const toTwitter = () => {
+    window.open("https://x.com/totokalezi?s=11");
+  };
+  const toInsta = () => {};
+
   return (
     <>
       <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -52,13 +63,33 @@ function Navbar() {
             <p>
               <FontAwesomeIcon icon={faClock} className="clock-icon" />:
               Mon-Sat: 8:00 a.m - 5:00 p.m
-            </p>
+            </p>{" "}
+            <p>
+              <FontAwesomeIcon icon={faPhone} className="phone-icon" />{" "}
+              <strong>Any questions?</strong> Phone: +254-740-900061
+            </p>{" "}
           </div>
           <div className="additional-info-icons">
-            <FontAwesomeIcon icon={faFacebookF} className="facebook-icon" />
-            <FontAwesomeIcon icon={faYoutube} className="youtube-icon" />
-            <FontAwesomeIcon icon={faXTwitter} className="twitter-icon" />
-            <FontAwesomeIcon icon={faInstagram} className="insta-icon" />
+            <FontAwesomeIcon
+              icon={faFacebookF}
+              className="facebook-icon"
+              onClick={toFacebook}
+            />
+            <FontAwesomeIcon
+              icon={faYoutube}
+              className="youtube-icon"
+              onClick={toYoutube}
+            />
+            <FontAwesomeIcon
+              icon={faXTwitter}
+              className="twitter-icon"
+              onClick={toTwitter}
+            />
+            <FontAwesomeIcon
+              icon={faInstagram}
+              className="insta-icon"
+              onClick={toInsta}
+            />
           </div>
         </div>
         <nav>
@@ -67,7 +98,7 @@ function Navbar() {
               {" "}
               <div className="logo">
                 <img src={logo} alt="logo" className="logo-image" />
-                <p className="logo-text">Toto Kalezi</p>
+                {/* <p className="logo-text">Toto Kalezi</p> */}
               </div>{" "}
               <div
                 className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -116,12 +147,6 @@ function Navbar() {
             </div>
             <div>
               <div className="contact-info">
-                <p>
-                  <FontAwesomeIcon icon={faPhone} className="phone-icon" />{" "}
-                  <strong>Any questions?</strong>
-                  <br />
-                  Phone +254-740-900061
-                </p>{" "}
                 <button onClick={toDonate} className="navbar-donate-btn">
                   DONATE
                 </button>

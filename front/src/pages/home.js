@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/toto_kalezi_logo.png";
 function Home() {
   return (
     <>

@@ -45,11 +45,24 @@
 }
 
 .mail-icon,
-.clock-icon {
-  padding-right: 5px;
+.clock-icon,
+.phone-icon {
+  padding-right: 2px;
   font-size: 1.4rem;
   vertical-align: middle;
 }
+
+.additional-info-icons:hover {
+  cursor: pointer;
+}
+
+/* .phone-icon {
+  font-size: 1rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+  vertical-align: middle;
+} */
 
 .facebook-icon {
   color: white;
@@ -83,20 +96,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(28, 227, 21, 0);
+  background-color: rgba(58, 187, 54, 0);
   padding: 10px 20px;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  padding-right: 30px;
 }
 
 .logo-image {
-  width: 90px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid #444ab5;
+  width: 40%;
+  /*border-radius: 50%;
+  border: 2px solid #444ab5; */
 }
 
 .logo-text {
@@ -127,25 +140,24 @@
   color: #009921;
 }
 
-.phone-icon {
-  font-size: 1rem;
-  border: 2px solid black;
-  border-radius: 50%;
-  padding: 5px;
-  vertical-align: middle;
-}
-
 .contact-info {
   color: #333;
   display: flex;
+  margin-left: 40px;
   flex-direction: row;
-  padding: 0px 20px;
-  gap: 25px;
+  padding-left: 15px;
+  gap: 50px;
+}
+
+.contact-info p {
+  display: block;
+  background-color: green;
+  padding-left: 60px;
 }
 
 .navbar-donate-btn {
   margin: auto;
-  padding: 15px;
+  padding: 12px;
   border-radius: 5px;
   background-color: #009921;
   color: white;
@@ -228,8 +240,8 @@
   }
 
   .logo-image {
-    width: 70px; /* Scales down the logo image */
-    height: 70px;
+    width: 30%; /* Scales down the logo image */
+    
   }
 
   .logo-text {
