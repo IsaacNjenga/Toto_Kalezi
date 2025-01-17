@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import logo from "../assets/images/toto_kalezi_logo.png";
+import Footer from "../components/footer";
 function Home() {
   return (
     <>
@@ -107,6 +108,7 @@ function Home() {
           non-characteristic words etc.
         </div>
       </div>
+      <Footer />
     </>
   );
 }
