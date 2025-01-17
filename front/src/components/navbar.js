@@ -11,7 +11,7 @@ import {
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/navbar.css";
 import logo from "../assets/images/toto_kalezi_logo.png";
-import logo2 from "../assets/images/toto_logo.png";
+//import logo2 from "../assets/images/toto_logo.png";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -73,22 +73,22 @@ function Navbar() {
               <strong>Any questions?</strong> Phone: +254-740-900061
             </p>{" "}
           </div>
-          <div className="additional-info-icons">
-            <FontAwesomeIcon
-              icon={faFacebookF}
-              className="facebook-icon"
-              onClick={toFacebook}
-            />
-            <FontAwesomeIcon
+          <div className="additional-info-icons"> <FontAwesomeIcon
+              icon={faXTwitter}
+              className="twitter-icon"
+              onClick={toTwitter}
+            /> <FontAwesomeIcon
               icon={faYoutube}
               className="youtube-icon"
               onClick={toYoutube}
             />
             <FontAwesomeIcon
-              icon={faXTwitter}
-              className="twitter-icon"
-              onClick={toTwitter}
+              icon={faFacebookF}
+              className="facebook-icon"
+              onClick={toFacebook}
             />
+           
+           
             <FontAwesomeIcon
               icon={faInstagram}
               className="insta-icon"

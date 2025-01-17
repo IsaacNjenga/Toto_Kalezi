@@ -16,6 +16,19 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.navbar .additional-info {
+  opacity: 1;
+  max-height: 100px; /* Set a height limit */
+  overflow: hidden;
+  transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+}
+
+.navbar.scrolled .additional-info {
+  opacity: 0;
+  max-height: 0; /* Smoothly collapses the section */
+  pointer-events: none;
+}
+
 .additional-info {
   background: linear-gradient(
     to left,
@@ -121,7 +134,6 @@
 
 .nav-links ul {
   padding: 0;
-
   display: flex;
   gap: 50px;
   margin: 0;
@@ -132,12 +144,18 @@
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: white;
   transition: color 0.3s ease;
 }
 
+.navbar.scrolled .nav-link {
+  color: #333;
+}
+
 .nav-link:hover {
-  color: #009921;
+  color: #ffffff;
+  text-decoration: underline;
+  transition: scale(1.2);
 }
 
 .contact-info {
@@ -203,8 +221,8 @@
 }
 
 .logo-image {
-  padding: 2px;
-  background-color: white;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
   border-radius: 15px;
 }
 
