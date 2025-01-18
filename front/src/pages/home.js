@@ -13,6 +13,9 @@ import ceoImage from "../assets/images/ceo.jpg";
 import managerImage from "../assets/images/manager.jpg";
 import staffImage from "../assets/images/staff.jpg";
 import staffImage2 from "../assets/images/staff2.jpg";
+import supportUs from "../assets/images/support_us.jpeg";
+import sustainability from "../assets/images/sustainability.jpeg";
+import free_volunteering from "../assets/images/free_volunteering.jpeg";
 
 function Home() {
   const infoCard = [
@@ -45,13 +48,13 @@ function Home() {
   const callToAction = [
     {
       id: 1,
-      image: image,
+      image: sustainability,
       title: "New Sustainability",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia tellus sem, pretium gravida erat mattis id. Integer bibendum ante nec nulla pulvinar, eget posuere orci tincidunt.",
     },
     {
       id: 2,
-      image: image,
+      image: free_volunteering,
       title: "Free Volunteering",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia tellus sem, pretium gravida erat mattis id. Integer bibendum ante nec nulla pulvinar, eget posuere orci tincidunt.",
     },
@@ -123,26 +126,36 @@ function Home() {
           </div>
         </div>
         <div className="donation-container">
-          <img src={image} alt="form-image" className="form-image" />
+          <img src={supportUs} alt="form-image" className="form-image" />
           <div className="donation-form">
             <h2 className="form-title">Support Us</h2>
             <p className="form-description">
               Every contribution is a step forward in changing the lives of
-              those in need.
+              those in need and inspiring future generations.
             </p>
-            <input
+            {/* <input
               type="text"
-              placeholder="Enter Donation Amount"
               className="donation-input"
-            />
+            /> */}
             <div className="donation-buttons">
-              <button className="preset-button">$10</button>
-              <button className="preset-button">$50</button>
-              <button className="preset-button">$100</button>
-              <button className="preset-button">$150</button>
+              <button className="preset-button" title="$10.00 ">
+                $10.00
+              </button>
+              <button className="preset-button" title="$20.00 ">
+                $20.00
+              </button>
+              <button className="preset-button" title="$50.00">
+                $50.00
+              </button>
+              <button className="preset-button" title="$100.00">
+                $100.00
+              </button>
+              <button className="preset-button" title="$150.00">
+                $150.00
+              </button>
               {/* <button className="preset-button custom-button">Custom</button> */}
             </div>
-            <button className="donate-now-button">DONATE NOW</button>
+            {/* <button className="donate-now-button">DONATE</button> */}
           </div>
         </div>
         <p className="hero-subtitle">Our amazing team here to walk with you</p>
@@ -157,8 +170,25 @@ function Home() {
           ))}
         </div>
         <p className="hero-subtitle">Essential contributions</p>
-        <div>
-          <h2>Choose the perfect help plan for you</h2>
+        <div className="image-carousel-container">
+          <div className="image-carousel-div">
+            <img src={image} alt="img" className="image-carousel" />
+            <img src={sustainability} alt="img" className="image-carousel" />
+            <img src={free_volunteering} alt="img" className="image-carousel" />
+            <img src={supportUs} alt="img" className="image-carousel" />
+            <img src={image} alt="img" className="image-carousel" />
+            <img src={sustainability} alt="img" className="image-carousel" />
+            <img src={free_volunteering} alt="img" className="image-carousel" />
+            <img src={supportUs} alt="img" className="image-carousel" />{" "}
+            <img src={image} alt="img" className="image-carousel" />
+            <img src={sustainability} alt="img" className="image-carousel" />
+            <img src={free_volunteering} alt="img" className="image-carousel" />
+            <img src={supportUs} alt="img" className="image-carousel" />
+            <img src={image} alt="img" className="image-carousel" />
+            <img src={sustainability} alt="img" className="image-carousel" />
+            <img src={free_volunteering} alt="img" className="image-carousel" />
+            <img src={supportUs} alt="img" className="image-carousel" />
+          </div>
         </div>
         <div>
           {" "}

@@ -139,6 +139,7 @@ p {
 
 .call-to-action-image {
   width: 100%;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -184,7 +185,7 @@ p {
 
 .donation-container {
   background-color: red;
-  margin: 10px 50px;
+  margin: 15px 50px;
   border-radius: 12px;
   position: relative;
   display: flex;
@@ -201,13 +202,13 @@ p {
 .donation-form {
   position: absolute;
   top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
+  left: 25%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Perfect centering */
   text-align: center;
-  background: linear-gradient(to left, rgba(58, 63, 65, 0.442), #2e2d2ea8);
+  background: linear-gradient(to left, rgba(34, 35, 35, 0.295), #2e2d2eba);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 30px 40px;
+  padding: 30px 25px;
   width: 90%;
   max-width: 500px;
   z-index: 1;
@@ -228,17 +229,17 @@ p {
 
 .donation-input {
   width: 100%;
-  padding: 15px;
+  padding: 15px 1px;
   font-size: 1.2rem;
-  border: 2px solid #2ecc71;
+  border: 2px solid #874a9a;
   border-radius: 5px;
   margin-bottom: 20px;
   outline: none;
 }
 
 .donation-input:focus {
-  border-color: #27ae60;
-  box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+  border-color: #874a9a;
+  box-shadow: 0 0 5px #874a9a;
 }
 
 .donation-buttons {
@@ -250,12 +251,12 @@ p {
 }
 
 .preset-button {
-  padding: 10px 35px;
-  font-size: 1rem;
-  background-color: #2ecc71;
+  padding: 13px 35px;
+  font-size: 1.3rem;
+  background-color: #844c9b;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -276,7 +277,7 @@ p {
 .donate-now-button {
   padding: 15px 40px;
   font-size: 1.3rem;
-  background-color: #e74c3c;
+  background-color: #039622;
   color: white;
   border: none;
   border-radius: 5px;
@@ -322,6 +323,46 @@ p {
   object-fit: cover;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+.image-carousel-container {
+  background-color: whitesmoke;
+  display: flex;
+  padding: 20px 20px;
+  margin: 10px 50px;
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+.image-carousel-div {
+  animation: scrollIcons 20s linear infinite;
+  display: flex;
+}
+.image-carousel-div:hover {
+  animation-play-state: running;
+}
+
+.image-carousel {
+  width: 80%;
+  object-fit: cover;
+  margin: 10px 10px;
+  border-radius: 4px;
+  height: 350px;
+  transition: transform 0.3s ease;
+}
+
+.image-carousel:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollIcons {
+  0% {
+    transform: translateX(100%); /* Start icons off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move icons off-screen to the left */
+  }
 }
 
 .navbar-element {
