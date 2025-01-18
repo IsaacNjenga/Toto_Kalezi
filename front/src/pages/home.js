@@ -9,6 +9,11 @@ import clothingIcon from "../assets/icons/hanger.png";
 import homeIcon from "../assets/icons/home.png";
 import medicalIcon from "../assets/icons/medical.png";
 
+import ceoImage from "../assets/images/ceo.jpg";
+import managerImage from "../assets/images/manager.jpg";
+import staffImage from "../assets/images/staff.jpg";
+import staffImage2 from "../assets/images/staff2.jpg";
+
 function Home() {
   const infoCard = [
     {
@@ -51,6 +56,14 @@ function Home() {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia tellus sem, pretium gravida erat mattis id. Integer bibendum ante nec nulla pulvinar, eget posuere orci tincidunt.",
     },
   ];
+
+  const team = [
+    { id: 1, image: ceoImage, title: "Founder & CEO", name: "Jane Doe" },
+    { id: 2, image: managerImage, title: "Manager", name: "John Doe" },
+    { id: 3, image: staffImage, title: "Chief of Staff", name: "Jane Doe" },
+    { id: 4, image: staffImage2, title: "Staff", name: "Jane Doe" },
+  ];
+
   return (
     <>
       <div className="home-container">
@@ -103,22 +116,54 @@ function Home() {
               <div className="call-to-action-text">
                 Become a <span className="volunteer-highlight">VOLUNTEER</span>{" "}
                 today!
+                <br />
+                <button className="call-to-action-btn">Sign Up</button>
               </div>
             </div>
           </div>
         </div>
-        <div>
-          image with small form to donate here. mention some mission/ completed
-          goals
+        <div className="donation-container">
+          <img src={image} alt="form-image" className="form-image" />
+          <div className="donation-form">
+            <h2 className="form-title">Support Us</h2>
+            <p className="form-description">
+              Every contribution is a step forward in changing the lives of
+              those in need.
+            </p>
+            <input
+              type="text"
+              placeholder="Enter Donation Amount"
+              className="donation-input"
+            />
+            <div className="donation-buttons">
+              <button className="preset-button">$10</button>
+              <button className="preset-button">$50</button>
+              <button className="preset-button">$100</button>
+              <button className="preset-button">$150</button>
+              {/* <button className="preset-button custom-button">Custom</button> */}
+            </div>
+            <button className="donate-now-button">DONATE NOW</button>
+          </div>
         </div>
-        <div> images of team, founder,ceo,....</div>Essential contributions
+        <p className="hero-subtitle">Our amazing team here to walk with you</p>
+        <div className="team-container">
+          {" "}
+          {team.map((t) => (
+            <div key={t.id} className="team-card">
+              <img src={t.image} alt={t.title} className="team-card-image" />
+              <h2>{t.title}</h2>
+              <h3>{t.name}</h3>
+            </div>
+          ))}
+        </div>
+        <p className="hero-subtitle">Essential contributions</p>
         <div>
           <h2>Choose the perfect help plan for you</h2>
         </div>
         <div>
           {" "}
           image to the left
-          <p>Each drop creates the sea</p>
+          <p className="hero-subtitle">Each drop creates the sea</p>
           <div>A concrete help for the causes</div>
         </div>
         <div> missions and such</div>
