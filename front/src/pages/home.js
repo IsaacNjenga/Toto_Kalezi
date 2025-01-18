@@ -8,6 +8,7 @@ import foodIcon from "../assets/icons/food.png";
 import clothingIcon from "../assets/icons/hanger.png";
 import homeIcon from "../assets/icons/home.png";
 import medicalIcon from "../assets/icons/medical.png";
+import donation from "../assets/icons/donation.png";
 
 import ceoImage from "../assets/images/ceo.jpg";
 import managerImage from "../assets/images/manager.jpg";
@@ -16,6 +17,13 @@ import staffImage2 from "../assets/images/staff2.jpg";
 import supportUs from "../assets/images/support_us.jpeg";
 import sustainability from "../assets/images/sustainability.jpeg";
 import free_volunteering from "../assets/images/free_volunteering.jpeg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCcAmex,
+  faCcMastercard,
+  faCcVisa,
+} from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 function Home() {
   const infoCard = [
@@ -190,13 +198,56 @@ function Home() {
             <img src={supportUs} alt="img" className="image-carousel" />
           </div>
         </div>
-        <div>
-          {" "}
-          image to the left
+        <div className="hero-container">
           <p className="hero-subtitle">Each drop creates the sea</p>
-          <div>A concrete help for the causes</div>
+          <div className="final-content-container">
+            <img
+              src={supportUs}
+              alt="Background"
+              className="background-content-image"
+            />
+            <div className="content">
+              <div className="left-content">
+                <h2>Lorem Ipsum</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Quisque lacinia, nibh non feugiat venenatis, risus elit
+                  volutpat nisi, vel fermentum odio turpis vel purus.
+                  Suspendisse potenti.
+                </p>
+                <div className="icon-container">
+                  <FontAwesomeIcon icon={faCcVisa} className="content-icon" />
+                  <FontAwesomeIcon icon={faCcAmex} className="content-icon" />
+                  <FontAwesomeIcon
+                    icon={faCcMastercard}
+                    className="content-icon"
+                  />
+                </div>
+              </div>
+              <div className="right-content">
+                <div>
+                  {" "}
+                  <img
+                    src={donation}
+                    alt="National Crisis"
+                    className="right-content-image"
+                  />
+                </div>
+                <div>
+                  {" "}
+                  <h4>National Crisis</h4>
+                  <p>
+                    Join us in making a difference. Every contribution helps us
+                    tackle urgent crises and bring relief to those in need.
+                  </p>
+                  <Link to="/give" className="donate-link">
+                    Donate
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div> missions and such</div>
       </div>
       <Footer />
     </>
