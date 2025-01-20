@@ -24,8 +24,10 @@ import {
   faCcVisa,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 function Home() {
+  const navigate = useNavigate();
+
   const infoCard = [
     {
       id: 1,
@@ -146,19 +148,49 @@ function Home() {
               className="donation-input"
             /> */}
             <div className="donation-buttons">
-              <button className="preset-button" title="$10.00 ">
+              <button
+                className="preset-button"
+                title="$10.00 "
+                onClick={() => {
+                  navigate("/give", { state: { amount: 10 } });
+                }}
+              >
                 $10.00
               </button>
-              <button className="preset-button" title="$20.00 ">
+              <button
+                className="preset-button"
+                title="$20.00"
+                onClick={() => {
+                  navigate("/give", { state: { amount: 20 } });
+                }}
+              >
                 $20.00
               </button>
-              <button className="preset-button" title="$50.00">
+              <button
+                className="preset-button"
+                title="$50.00"
+                onClick={() => {
+                  navigate("/give", { state: { amount: 50 } });
+                }}
+              >
                 $50.00
               </button>
-              <button className="preset-button" title="$100.00">
+              <button
+                className="preset-button"
+                title="$100.00"
+                onClick={() => {
+                  navigate("/give", { state: { amount: 100 } });
+                }}
+              >
                 $100.00
               </button>
-              <button className="preset-button" title="$150.00">
+              <button
+                className="preset-button"
+                title="$150.00"
+                onClick={() => {
+                  navigate("/give", { state: { amount: 150 } });
+                }}
+              >
                 $150.00
               </button>
               {/* <button className="preset-button custom-button">Custom</button> */}

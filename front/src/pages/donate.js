@@ -1,15 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import "../assets/css/donate.css"; // Link to the CSS file
+import "../assets/css/donate.css";
+import { useLocation } from "react-router-dom";
 
 function Donate() {
+  const location = useLocation();
+  const amountFromButton = location.state?.amount || "";
+  const formRef = useRef(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     amount: "",
     message: "",
   });
+
+  useEffect(() => {
+    if (amountFromButton) {
+      setFormData((prev) => ({ ...prev, amount: amountFromButton }));
+    }
+    formRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [amountFromButton]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,6 +31,7 @@ function Donate() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you for your generous donation!");
+    setFormData({ email: "", amount: "", amountFromButton: "" });
   };
 
   return (
@@ -43,7 +56,7 @@ function Donate() {
             </p>
           </section>
 
-          <section className="donate-form">
+          <section className="donate-form" ref={formRef}>
             <h2>Donate Here</h2>
             <p>
               Your support allows us to continue our work and expand our reach
