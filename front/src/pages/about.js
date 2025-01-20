@@ -148,7 +148,7 @@ function About() {
                 every contribution counts.
               </p>
 
-              <Link to="/give" className="donate-btn">
+              <Link to="/give" className="donate-link-btn">
                 Donate Now
               </Link>
             </div>
