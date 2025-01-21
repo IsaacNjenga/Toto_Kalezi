@@ -520,8 +520,39 @@ p {
     align-items: center;
   }
 
+  .call-to-action-container {
+    margin: auto;
+    background-color: #87489e16;
+  }
+  .dfsh {
+    border-right: 2px solid rgba(128, 0, 128, 0);
+    display: flex;
+    padding: auto;
+  }
+
+  .call-to-action-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .call-to-action-donation {
+    padding: auto;
+    margin: auto;
+  }
+
+  .call-to-action-donation-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   .team-card,
   .info-card {
     width: 60%;
+  }
+
+  .donation-form {
+    display: none;
   }
 }

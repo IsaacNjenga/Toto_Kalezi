@@ -61,23 +61,32 @@ function Navbar() {
         <div className="additional-info">
           <div className="info-text">
             <p>
-              <FontAwesomeIcon icon={faEnvelope} className="mail-icon" />:
-              info@donations.com
+              <FontAwesomeIcon icon={faEnvelope} className="mail-icon" />{" "}
+              <a
+                href="mailto:
+                totokalezifoundation20@gmail.com"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                totokalezifoundation20@gmail.com
+              </a>
             </p>
             <p>
-              <FontAwesomeIcon icon={faClock} className="clock-icon" />:
+              <FontAwesomeIcon icon={faClock} className="clock-icon" />
               Mon-Sat: 8:00 a.m - 5:00 p.m
             </p>{" "}
             <p>
               <FontAwesomeIcon icon={faPhone} className="phone-icon" />{" "}
-              <strong>Any questions?</strong> Phone: +254-740-900061
+              <strong>Any questions?</strong> Reach out +254-768-969772
             </p>{" "}
           </div>
-          <div className="additional-info-icons"> <FontAwesomeIcon
+          <div className="additional-info-icons">
+            {" "}
+            <FontAwesomeIcon
               icon={faXTwitter}
               className="twitter-icon"
               onClick={toTwitter}
-            /> <FontAwesomeIcon
+            />{" "}
+            <FontAwesomeIcon
               icon={faYoutube}
               className="youtube-icon"
               onClick={toYoutube}
@@ -87,8 +96,6 @@ function Navbar() {
               className="facebook-icon"
               onClick={toFacebook}
             />
-           
-           
             <FontAwesomeIcon
               icon={faInstagram}
               className="insta-icon"

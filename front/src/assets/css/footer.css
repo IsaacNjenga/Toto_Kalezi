@@ -42,6 +42,15 @@
   width: 100%;
 }
 
+.contacts-footer {
+  width: 100%;
+}
+
+.contacts-footer p {
+  width: 100%;
+  padding: 5px 10px;
+}
+
 .about-us-footer,
 .contacts-footer,
 .socials-footer {
@@ -53,8 +62,8 @@
 .footer-clock-icon,
 .footer-phone-icon,
 .footer-location-icon {
-  padding-right: 4px;
-  font-size: 1.4rem;
+  padding-right: 5px;
+  font-size: 1.7rem;
   vertical-align: middle;
 }
 

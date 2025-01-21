@@ -19,7 +19,11 @@ import pic8 from "../assets/images/gallery_images/8.jpeg";
 
 import footerbg from "../assets/images/footer-bg.jpeg";
 import { faClock, faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faMobile,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/footer.css";
 
 function Footer() {
@@ -78,14 +82,24 @@ function Footer() {
               <h2>ALL CONTACTS</h2>
               <p>
                 <FontAwesomeIcon icon={faPhone} className="footer-phone-icon" />{" "}
-                +254-740-900061
+                +254-768-96977
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faMobile} className="footer-mail-icon" />{" "}
+                +254-787-685667
               </p>
               <p>
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className="footer-mail-icon"
-                />{" "}
-                info@email.com
+                />
+                <a
+                  href="mailto:
+                totokalezifoundation20@gmail.com"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  totokalezifoundation20@gmail.com
+                </a>
               </p>
               <p>
                 <FontAwesomeIcon
