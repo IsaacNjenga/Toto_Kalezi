@@ -552,7 +552,22 @@ p {
     width: 60%;
   }
 
+  .donation-container {
+    margin: 70px 30px;
+    padding: auto;
+  }
+
+  .form-image {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
   .donation-form {
-    display: none;
+    margin: 10px 0px;
+    padding: 0px 5px;
+    background-color: rgba(255, 0, 0, 0);
+    top: 50%;
+    left: 50%;
   }
 }
