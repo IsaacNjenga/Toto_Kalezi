@@ -326,17 +326,21 @@ p {
 }
 
 .image-carousel-container {
-  background-color: whitesmoke;
+  background-color: #f9f9f9; /* Softer background */
   display: flex;
-  padding: 20px 20px;
-  margin: 10px 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 50px;
   border-radius: 15px;
-
   overflow: hidden;
+  position: relative; /* To manage position of controls, if added */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 .image-carousel-div {
-  animation: scrollIcons 20s linear infinite;
+  animation: scrollContinuous 20s linear infinite;
+  gap: 15px;
   display: flex;
 }
 .image-carousel-div:hover {
@@ -353,15 +357,18 @@ p {
 }
 
 .image-carousel:hover {
-  transform: scale(1.05);
+  transform: scale(1.1); /* Slightly zoom in */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes scrollIcons {
+@keyframes scrollContinuous {
   0% {
-    transform: translateX(100%); /* Start icons off-screen to the right */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Move icons off-screen to the left */
+    transform: translateX(
+      calc(-250px * 4)
+    ); /* Adjust for the total width of one set of images */
   }
 }
 
@@ -596,6 +603,20 @@ p {
     margin: 10px;
   }
 
+  .image-carousel-container {
+    margin: 10px 20px; /* Reduce margin */
+    padding: 15px;
+  }
+
+  .image-carousel {
+    width: 200px; /* Smaller width for smaller screens */
+    height: 150px; /* Adjust height proportionally */
+  }
+
+  .image-carousel-div {
+    gap: 10px; /* Reduce gap */
+  }
+
   .hero-container {
     margin: auto;
   }
@@ -628,5 +649,12 @@ p {
   .right-content-image {
     width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-carousel {
+    width: 150px;
+    height: 100px;
   }
 }

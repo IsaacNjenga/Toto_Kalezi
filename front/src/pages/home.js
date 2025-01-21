@@ -217,24 +217,29 @@ function Home() {
         <p className="hero-subtitle">Essential contributions</p>
         <div className="image-carousel-container">
           <div className="image-carousel-div">
-            <img src={image} alt="img" className="image-carousel" />
-            <img src={sustainability} alt="img" className="image-carousel" />
-            <img src={free_volunteering} alt="img" className="image-carousel" />
-            <img src={supportUs} alt="img" className="image-carousel" />
-            <img src={image} alt="img" className="image-carousel" />
-            <img src={sustainability} alt="img" className="image-carousel" />
-            <img src={free_volunteering} alt="img" className="image-carousel" />
-            <img src={supportUs} alt="img" className="image-carousel" />{" "}
-            <img src={image} alt="img" className="image-carousel" />
-            <img src={sustainability} alt="img" className="image-carousel" />
-            <img src={free_volunteering} alt="img" className="image-carousel" />
-            <img src={supportUs} alt="img" className="image-carousel" />
-            <img src={image} alt="img" className="image-carousel" />
-            <img src={sustainability} alt="img" className="image-carousel" />
-            <img src={free_volunteering} alt="img" className="image-carousel" />
-            <img src={supportUs} alt="img" className="image-carousel" />
+            {[image, sustainability, free_volunteering, supportUs].map(
+              (imgSrc, index) => (
+                <img
+                  key={`carousel-img-${index}`}
+                  src={imgSrc}
+                  alt={`carousel-img-${index}`}
+                  className="image-carousel"
+                />
+              )
+            )}
+            {[image, sustainability, free_volunteering, supportUs].map(
+              (imgSrc, index) => (
+                <img
+                  key={`carousel-duplicate-${index}`}
+                  src={imgSrc}
+                  alt={`carousel-duplicate-${index}`}
+                  className="image-carousel"
+                />
+              )
+            )}
           </div>
         </div>
+
         <div className="hero-container">
           <p className="hero-subtitle">Each drop creates the sea</p>
           <div className="final-content-container">
