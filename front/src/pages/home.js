@@ -241,7 +241,9 @@ function Home() {
         </div>
 
         <div className="hero-container">
-          <p className="hero-subtitle">Each drop creates the sea</p>
+          <p className="hero-subtitle">
+            Every small act creates a ripple of change
+          </p>
           <div className="final-content-container">
             <img
               src={supportUs}
@@ -250,12 +252,11 @@ function Home() {
             />
             <div className="content">
               <div className="left-content">
-                <h2>Lorem Ipsum</h2>
+                <h2>Be The Difference!</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Quisque lacinia, nibh non feugiat venenatis, risus elit
-                  volutpat nisi, vel fermentum odio turpis vel purus.
-                  Suspendisse potenti.
+                  Together, we can transform lives. Your support enables us to
+                  provide education, healthcare, and emergency aid to those in
+                  need. Let’s make every moment count.
                 </p>
                 <div className="icon-container">
                   <FontAwesomeIcon icon={faCcVisa} className="content-icon" />
@@ -279,8 +280,9 @@ function Home() {
                   {" "}
                   <h4>National Crisis</h4>
                   <p>
-                    Join us in making a difference. Every contribution helps us
-                    tackle urgent crises and bring relief to those in need.
+                    Join our mission to provide food, shelter, and hope during
+                    times of crisis. Every donation fuels our ability to respond
+                    swiftly and effectively.
                   </p>
                   <Link to="/give" className="donate-link">
                     Donate

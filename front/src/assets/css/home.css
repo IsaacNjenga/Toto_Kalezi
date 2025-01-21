@@ -609,52 +609,103 @@ p {
   }
 
   .image-carousel {
-    width: 200px; /* Smaller width for smaller screens */
-    height: 150px; /* Adjust height proportionally */
+    width: 270px; /* Smaller width for smaller screens */
+    height: 200px; /* Adjust height proportionally */
   }
 
   .image-carousel-div {
-    gap: 10px; /* Reduce gap */
+    gap: 12px; /* Reduce gap */
   }
 
   .hero-container {
-    margin: auto;
+    padding: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    color: #333;
   }
 
   .final-content-container {
-    margin: auto;
-    padding: auto;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .background-content-image {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    opacity: 0.25; /* Reduce opacity for better focus on text */
   }
 
   .content {
-    padding: 5px 5px;
-    margin: 0px 0px;
-    width: 50%;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
   }
 
-  .left-content {
-    text-align: left;
-  }
-  .left-content h2,
-  .right-content h4 {
-    font-size: 1rem;
+  .left-content,
+  .right-content {
+    padding: 5px;
+    flex: none; /* Reset flex behavior */
+    text-align: center;
+    border-radius: 10px;
   }
 
-  .left-content p,
-  .right-content p {
-    text-align: left;
-    font-size: 0.8rem;
+  .left-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .left-content p {
+    font-size: 1.2rem;
+  }
+
+  .icon-container {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .content-icon {
+    font-size: 2rem;
+  }
+
+  .right-content {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .right-content-image {
-    width: 100%;
+    width: 20%;
+    border: 2px solid #ae98c2;
     height: auto;
+    border-radius: 50%;
+  }
+
+  .right-content h4 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+
+  .right-content p {
+    font-size: 1.2rem;
+    color: #f5e5e5;
+  }
+
+  .donate-link {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .image-carousel {
     width: 150px;
     height: 100px;
   }
-}
+} */
