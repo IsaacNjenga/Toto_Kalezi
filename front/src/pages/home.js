@@ -127,7 +127,10 @@ function Home() {
             <Navbar />
           </div>
           <div className="home-content">
-            <div className="home-header"></div>
+            <div className="home-header">
+              <h1 className="header-title">Toto Kalezi Foundation</h1>
+              <h2 className="header-subtitle">~ To Destiny With Hope ~</h2>
+            </div>
           </div>
         </div>
         <p className="hero-subtitle">

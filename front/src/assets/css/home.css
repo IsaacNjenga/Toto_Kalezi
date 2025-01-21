@@ -9,7 +9,7 @@ html {
 
 .home-image {
   position: relative;
-  background: linear-gradient(#281a7965, rgba(53, 155, 84, 0.234)),
+  background: linear-gradient(#9e97c784, rgba(224, 236, 228, 0.035)),
     url("../images/home-bg.jpeg") no-repeat center center/cover;
   padding-bottom: 250px;
   padding-top: 200px;
@@ -19,6 +19,33 @@ html {
 .home-content {
   padding: 80px;
   margin-bottom: 65px;
+}
+
+.home-header {
+  text-align: center; /* Center-align text */
+  padding: 30px 20px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.header-title {
+  font-family: "Playfair Display", serif; /* Elegant serif font for the title */
+  font-size: 3rem; /* Larger font size for prominence */
+  font-weight: 700; /* Bold weight for emphasis */
+  color: #ffffff; /* Dark, professional color */
+  margin-bottom: 15px;
+  text-transform: uppercase; /* Optional: Makes the text all uppercase */
+  letter-spacing: 2.3px; /* Adds spacing between letters */
+}
+
+.header-subtitle {
+  font-family: "Lora", serif; /* Complimentary serif font */
+  font-size: 1.8rem; /* Slightly smaller than the title */
+  font-weight: 400; /* Regular weight for contrast */
+  color: #f7f7f7; /* A softer, yet matching tone to the title */
+  margin-top: 0;
+  letter-spacing: 1.5px; /* Adds spacing for readability */
+  font-style: italic; /* Subtle italic style for elegance */
 }
 
 .hero-subtitle {
@@ -48,8 +75,8 @@ html {
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.079);
   background-color: white;
   gap: 25px;
-  padding: 10px;
-  margin: 20px;
+  padding: 10px 10px;
+  margin: 10px 7px;
   transition: transform 0.3s ease;
 }
 
@@ -72,12 +99,9 @@ html {
 }
 
 .info-card-icon {
-  width: 20%; /* Set a fixed width */
+  width: 29%; /* Set a fixed width */
   height: auto; /* Ensure the height matches the width */
-  margin: 5px;
-  border: 1px solid blue; /* Border styling */
-  padding: 10px; /* Padding around the content */
-  border-radius: 50%;
+  margin: 10px 5px;
 }
 
 .call-to-action {
@@ -539,6 +563,48 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .home-header {
+    text-align: center; /* Center-align text */
+    padding: 1px 12px;
+    border-radius: 12px;
+    margin: 0px 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-title {
+    text-align: center;
+    font-family: "Playfair Display", serif; /* Elegant serif font for the title */
+    font-size: 2rem; /* Larger font size for prominence */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #ffffff; /* Dark, professional color */
+    margin-bottom: 12px;
+    text-transform: uppercase; /* Optional: Makes the text all uppercase */
+    letter-spacing: 2px; /* Adds spacing between letters */
+  }
+
+  .header-subtitle {
+    font-family: "Lora", serif; /* Complimentary serif font */
+    font-size: 1.1rem; /* Slightly smaller than the title */
+    font-weight: 200; /* Regular weight for contrast */
+    color: #f7f7f7; /* A softer, yet matching tone to the title */
+    margin-top: 0;
+    letter-spacing: 1px; /* Adds spacing for readability */
+    font-style: italic; /* Subtle italic style for elegance */
+  }
+
+  .info-card {
+    width: 100%;
+    margin: 10px 10px;
+  }
+
+  .info-container {
+    grid-template-columns: 1fr;
+    padding: 1px;
+    margin: 12px 4px;
+  }
+
   .team-container {
     margin: 10px 20px;
     padding: 5px;
