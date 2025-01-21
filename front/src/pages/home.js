@@ -130,7 +130,12 @@ function Home() {
                 Become a <span className="volunteer-highlight">VOLUNTEER</span>{" "}
                 today!
                 <br />
-                <button className="call-to-action-btn">Sign Up</button>
+                <button
+                  className="call-to-action-btn"
+                  onClick={() => navigate("/contact")}
+                >
+                  Sign Up
+                </button>
               </div>
             </div>
           </div>

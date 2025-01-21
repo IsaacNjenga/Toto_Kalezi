@@ -205,7 +205,7 @@ p {
   left: 25%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Perfect centering */
   text-align: center;
-  background: linear-gradient(to left, rgba(34, 35, 35, 0.295), #2e2d2eba);
+  background: linear-gradient(to left, rgba(34, 35, 35, 0.197), #2e2d2e84);
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 30px 25px;
@@ -522,7 +522,7 @@ p {
 
   .call-to-action-container {
     margin: auto;
-    background-color: #87489e16;
+    background-color: rgba(255, 0, 0, 0);
   }
   .dfsh {
     border-right: 2px solid rgba(128, 0, 128, 0);
@@ -549,11 +549,11 @@ p {
 
   .team-card,
   .info-card {
-    width: 60%;
+    width: 70%;
   }
 
   .donation-container {
-    margin: 40px 5px;
+    margin: 80px 0px;
     padding: auto;
   }
 
@@ -565,22 +565,34 @@ p {
 
   .donation-form {
     margin: 1px 0px;
-    padding: 0px 5px;
+    padding: 0px 2px;
     top: 50%;
     left: 50%;
+    background-color: #03962300;
   }
 
   .donation-form h2 {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 800;
   }
 
   .donation-form p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .donation-form button {
-    padding: 10px 25px;
-    margin: 1px 2px;
+    padding: 8px 20px;
+    margin: 0px 0px;
+    font-size: 0.9rem;
+  }
+
+  .team-container {
+    margin: auto;
+    padding: auto;
+    background-color: #87489e16;
+  }
+
+  .team-card {
+    margin: 10px;
   }
 }
