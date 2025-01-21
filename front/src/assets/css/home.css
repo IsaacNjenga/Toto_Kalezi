@@ -553,7 +553,7 @@ p {
   }
 
   .donation-container {
-    margin: 70px 30px;
+    margin: 40px 5px;
     padding: auto;
   }
 
@@ -564,10 +564,23 @@ p {
   }
 
   .donation-form {
-    margin: 10px 0px;
+    margin: 1px 0px;
     padding: 0px 5px;
-    background-color: rgba(255, 0, 0, 0);
     top: 50%;
     left: 50%;
+  }
+
+  .donation-form h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+  }
+
+  .donation-form p {
+    font-size: 1rem;
+  }
+
+  .donation-form button {
+    padding: 10px 25px;
+    margin: 1px 2px;
   }
 }
