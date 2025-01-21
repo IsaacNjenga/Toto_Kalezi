@@ -589,10 +589,44 @@ p {
   .team-container {
     margin: auto;
     padding: auto;
-    background-color: #87489e16;
+    background-color: #87489e05;
   }
 
   .team-card {
     margin: 10px;
+  }
+
+  .hero-container {
+    margin: auto;
+  }
+
+  .final-content-container {
+    margin: auto;
+    padding: auto;
+  }
+
+  .content {
+    padding: 5px 5px;
+    margin: 0px 0px;
+    width: 50%;
+  }
+
+  .left-content {
+    text-align: left;
+  }
+  .left-content h2,
+  .right-content h4 {
+    font-size: 1rem;
+  }
+
+  .left-content p,
+  .right-content p {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .right-content-image {
+    width: 100%;
+    height: auto;
   }
 }
