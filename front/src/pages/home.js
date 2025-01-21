@@ -21,6 +21,21 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import volunteerImage from "../assets/images/gallery_images/38.jpeg";
+
+import carouselImage1 from "../assets/images/gallery_images/29.jpeg";
+import carouselImage2 from "../assets/images/gallery_images/34.jpeg";
+import carouselImage4 from "../assets/images/gallery_images/3.jpeg";
+import carouselImage3 from "../assets/images/gallery_images/32.jpeg";
+import carouselImage5 from "../assets/images/gallery_images/22.jpeg";
+import carouselImage6 from "../assets/images/gallery_images/5.jpeg";
+import carouselImage7 from "../assets/images/gallery_images/36.jpeg";
+import carouselImage8 from "../assets/images/gallery_images/12.jpeg";
+import carouselImage9 from "../assets/images/gallery_images/8.jpeg";
+import carouselImage10 from "../assets/images/gallery_images/28.jpeg";
+import carouselImage11 from "../assets/images/gallery_images/30.jpeg";
+import carouselImage12 from "../assets/images/gallery_images/13.jpeg";
+import carouselImage13 from "../assets/images/gallery_images/25.jpeg";
 
 import Miriam from "../assets/images/Miriam_Wairimu_K.jpeg";
 import Brenda from "../assets/images/Brenda_Ngare.jpeg";
@@ -64,15 +79,16 @@ function Home() {
       id: 1,
       image: sustainability,
       title: "New Sustainability",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia tellus sem, pretium gravida erat mattis id. Integer bibendum ante nec nulla pulvinar, eget posuere orci tincidunt.",
+      text: "Join us in creating a greener future. Our sustainability initiatives focus on environmental conservation, promoting renewable energy, and educating communities on eco-friendly practices. Together, we can build a sustainable tomorrow.",
     },
     {
       id: 2,
       image: free_volunteering,
       title: "Free Volunteering",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia tellus sem, pretium gravida erat mattis id. Integer bibendum ante nec nulla pulvinar, eget posuere orci tincidunt.",
+      text: "Your time and skills can make a significant difference. Volunteer with us to support underprivileged communities, participate in impactful projects, and experience the joy of giving back—all at no cost to you.",
     },
   ];
+  
 
   const team = [
     {
@@ -167,7 +183,7 @@ function Home() {
             </div>{" "}
             <div className="call-to-action-donation">
               <img
-                src={image}
+                src={volunteerImage}
                 alt="ajh"
                 className="call-to-action-donation-image"
               />
@@ -262,26 +278,50 @@ function Home() {
         <p className="hero-subtitle">Essential contributions</p>
         <div className="image-carousel-container">
           <div className="image-carousel-div">
-            {[image, sustainability, free_volunteering, supportUs].map(
-              (imgSrc, index) => (
-                <img
-                  key={`carousel-img-${index}`}
-                  src={imgSrc}
-                  alt={`carousel-img-${index}`}
-                  className="image-carousel"
-                />
-              )
-            )}
-            {[image, sustainability, free_volunteering, supportUs].map(
-              (imgSrc, index) => (
-                <img
-                  key={`carousel-duplicate-${index}`}
-                  src={imgSrc}
-                  alt={`carousel-duplicate-${index}`}
-                  className="image-carousel"
-                />
-              )
-            )}
+            {[
+              carouselImage1,
+              carouselImage2,
+              carouselImage3,
+              carouselImage4,
+              carouselImage5,
+              carouselImage6,
+              carouselImage7,
+              carouselImage8,
+              carouselImage9,
+              carouselImage10,
+              carouselImage11,
+              carouselImage12,
+              carouselImage13,
+            ].map((imgSrc, index) => (
+              <img
+                key={`carousel-img-${index}`}
+                src={imgSrc}
+                alt={`carousel-img-${index}`}
+                className="image-carousel"
+              />
+            ))}
+            {[
+              carouselImage1,
+              carouselImage2,
+              carouselImage3,
+              carouselImage4,
+              carouselImage5,
+              carouselImage6,
+              carouselImage7,
+              carouselImage8,
+              carouselImage9,
+              carouselImage10,
+              carouselImage11,
+              carouselImage12,
+              carouselImage13,
+            ].map((imgSrc, index) => (
+              <img
+                key={`carousel-img-${index}`}
+                src={imgSrc}
+                alt={`carousel-img-${index}`}
+                className="image-carousel"
+              />
+            ))}
           </div>
         </div>
 

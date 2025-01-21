@@ -8,7 +8,7 @@
 .about-us-image {
   position: relative;
   background: linear-gradient(#281a7965, rgba(53, 155, 84, 0.234)),
-    url("../images/support_us.jpeg") no-repeat center center/cover;
+    url("../images/gallery_images/18.jpeg") no-repeat center center/cover;
   padding-bottom: 250px;
   padding-top: 150px;
   z-index: 10;
@@ -42,10 +42,10 @@
 }
 
 .intro p {
-  text-align: justify;
-  font-size: 1.4rem;
-  color: #34495e;
-  max-width: 800px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 900px;
   margin: 20px auto;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .image-placeholder img {
-  width: 80%;
+  width: 85%;
   height: auto;
   border-radius: 4px;
   transition: transform 0.4s ease-in-out;

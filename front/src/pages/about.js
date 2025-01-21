@@ -1,9 +1,13 @@
 import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import image from "../assets/images/footer-bg.jpeg";
+//import image from "../assets/images/footer-bg.jpeg";
 import "../assets/css/about.css";
 import { Link } from "react-router-dom";
+
+import image2 from "../assets/images/gallery_images/12.jpeg";
+import image3 from "../assets/images/gallery_images/15.jpeg";
+import image4 from "../assets/images/gallery_images/19.jpeg";
 
 function About() {
   return (
@@ -36,7 +40,7 @@ function About() {
             <div className="mission-content">
               {" "}
               <div className="image-placeholder">
-                <img src={image} alt="Our Mission" />
+                <img src={image2} alt="Our Mission" />
               </div>
               <p>
                 Our mission is to provide street children, the sick, orphans,
@@ -73,7 +77,7 @@ function About() {
                 dignified lives.
               </p>
               <div className="image-placeholder">
-                <img src={image} alt="Our Vision" />
+                <img src={image3} alt="Our Vision" />
               </div>
             </div>
           </section>
@@ -111,7 +115,7 @@ function About() {
             <div className="impact-content">
               {" "}
               <div className="image-placeholder">
-                <img src={image} alt="Our Impact" />
+                <img src={image4} alt="Our Impact" />
               </div>
               <p>
                 Over the years, Toto Kalezi Foundation has transformed the lives

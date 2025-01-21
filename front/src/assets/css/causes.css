@@ -1,0 +1,81 @@
+.causes-page {
+    font-family: "Lora", serif;
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f7d9e3, #d1f0ff);
+    border-radius: 15px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
+  
+  .hero-image-placeholder {
+    width: 50%;
+    height: 300px;
+    background: #ececec;
+    border-radius: 10px;
+  }
+  
+  .mission-section,
+  .why-it-matters-section,
+  .help-section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-section .mission-text h2,
+  .why-it-matters-section h2,
+  .help-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .mission-section .mission-text p,
+  .why-it-matters-content .why-text p,
+  .help-section p {
+    font-size: 1.1rem;
+  }
+  
+  .mission-image-placeholder,
+  .why-image-placeholder,
+  .help-image-placeholder {
+    width: 100%;
+    height: 250px;
+    background: #ececec;
+    border-radius: 10px;
+  }
+  
+  .why-it-matters-section .why-it-matters-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .help-section {
+    text-align: center;
+  }
+  

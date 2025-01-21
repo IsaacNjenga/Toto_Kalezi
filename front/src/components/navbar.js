@@ -152,12 +152,12 @@ function Navbar() {
                       Give
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     {" "}
                     <Link to="/causes" className="nav-link">
                       Causes
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

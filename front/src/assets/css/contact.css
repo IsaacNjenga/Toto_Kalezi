@@ -7,12 +7,18 @@
 
 .contact-image {
   position: relative;
-  background: linear-gradient(#9e97c784, rgba(224, 236, 228, 0.035)),
-    url("../images/home-bg.jpeg") no-repeat center center/cover;
+  background: linear-gradient(#281a792a, rgba(53, 155, 84, 0.106)),
+    url("../images/gallery_images/15.jpeg") no-repeat center center/cover;
   padding-bottom: 250px;
-  padding-top: 225px;
+  padding-top: 150px;
   z-index: 10;
 }
+
+.contact-content {
+  padding: 26.5px;
+  margin-bottom: 20px;
+}
+
 
 .contact-page {
   font-family: "Arial", sans-serif;
