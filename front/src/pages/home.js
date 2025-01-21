@@ -10,10 +10,6 @@ import homeIcon from "../assets/icons/home.png";
 import medicalIcon from "../assets/icons/medical.png";
 import donation from "../assets/icons/donation.png";
 
-import ceoImage from "../assets/images/ceo.jpg";
-import managerImage from "../assets/images/manager.jpg";
-import staffImage from "../assets/images/staff.jpg";
-import staffImage2 from "../assets/images/staff2.jpg";
 import supportUs from "../assets/images/support_us.jpeg";
 import sustainability from "../assets/images/sustainability.jpeg";
 import free_volunteering from "../assets/images/free_volunteering.jpeg";
@@ -25,6 +21,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
+import Miriam from "../assets/images/Miriam_Wairimu_K.jpeg";
+import Brenda from "../assets/images/Brenda_Ngare.jpeg";
+import Florence from "../assets/images/Florence_Ballenger.jpeg";
+import Sharon from "../assets/images/Sharon_Wilhelm.jpeg";
+import Susan from "../assets/images/Susan_Chege.jpeg";
+import Washington from "../assets/images/Susan_Washington.png";
+
 function Home() {
   const navigate = useNavigate();
 
@@ -71,10 +75,48 @@ function Home() {
   ];
 
   const team = [
-    { id: 1, image: ceoImage, title: "Founder & CEO", name: "Jane Doe" },
-    { id: 2, image: managerImage, title: "Manager", name: "John Doe" },
-    { id: 3, image: staffImage, title: "Chief of Staff", name: "Jane Doe" },
-    { id: 4, image: staffImage2, title: "Staff", name: "Jane Doe" },
+    {
+      id: 1,
+      image: Miriam,
+      title: "Director",
+      name: "Miriam Wairimu K",
+      location: "Kenya",
+    },
+    {
+      id: 2,
+      image: Brenda,
+      title: "Manager",
+      name: "Brenda Ngare",
+      location: "USA",
+    },
+    {
+      id: 3,
+      image: Florence,
+      title: "Manager",
+      name: "Florence Ballenger",
+      location: "USA",
+    },
+    {
+      id: 4,
+      image: Washington,
+      title: "Supporting Staff",
+      name: "Susan Washington",
+      location: "Germany",
+    },
+    {
+      id: 5,
+      image: Susan,
+      title: "Supporting Staff",
+      name: "Susan Chege",
+      location: "USA",
+    },
+    {
+      id: 6,
+      image: Sharon,
+      title: "Supporting Staff",
+      name: "Sharon Wilhelm",
+      location: "USA",
+    },
   ];
 
   return (
@@ -205,12 +247,12 @@ function Home() {
         </div>
         <p className="hero-subtitle">Our amazing team here to walk with you</p>
         <div className="team-container">
-          {" "}
           {team.map((t) => (
             <div key={t.id} className="team-card">
               <img src={t.image} alt={t.title} className="team-card-image" />
-              <h2>{t.title}</h2>
-              <h3>{t.name}</h3>
+              <h2>{t.name}</h2>
+              <h3>{t.title}</h3>
+              <h4>{t.location}</h4>
             </div>
           ))}
         </div>
