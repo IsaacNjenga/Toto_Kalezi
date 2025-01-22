@@ -108,10 +108,6 @@ function Footer() {
                 />
                 Kahawa Sukari, Nairobi, Kenya
               </p>
-              <p>
-                <FontAwesomeIcon icon={faClock} className="footer-clock-icon" />{" "}
-                Mon-Sat: 8:00 a.m - 5:00 p.m
-              </p>
             </div>
             <div className="socials-footer">
               <h2>SOCIALS</h2>

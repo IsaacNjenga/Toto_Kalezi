@@ -71,10 +71,6 @@ function Navbar() {
               </a>
             </p>
             <p>
-              <FontAwesomeIcon icon={faClock} className="clock-icon" />
-              Mon-Sat: 8:00 a.m - 5:00 p.m
-            </p>{" "}
-            <p>
               <FontAwesomeIcon icon={faPhone} className="phone-icon" />{" "}
               <strong>Any questions?</strong> Reach out +254-768-969772
             </p>{" "}
