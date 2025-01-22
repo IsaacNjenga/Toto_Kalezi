@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/navbar";
-import image from "../assets/images/footer-bg.jpeg";
+//import image from "../assets/images/footer-bg.jpeg";
 import Footer from "../components/footer";
 import "../assets/css/home.css";
 
@@ -10,7 +10,7 @@ import homeIcon from "../assets/icons/home.png";
 import medicalIcon from "../assets/icons/medical.png";
 import donation from "../assets/icons/donation.png";
 
-import supportUs from "../assets/images/support_us.jpeg";
+import supportUs from "../assets/images/gallery_images/42.jpeg";
 import sustainability from "../assets/images/sustainability.jpeg";
 import free_volunteering from "../assets/images/free_volunteering.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -88,7 +88,6 @@ function Home() {
       text: "Your time and skills can make a significant difference. Volunteer with us to support underprivileged communities, participate in impactful projects, and experience the joy of giving back—all at no cost to you.",
     },
   ];
-  
 
   const team = [
     {
