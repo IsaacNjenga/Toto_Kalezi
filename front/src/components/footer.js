@@ -55,11 +55,15 @@ function Footer() {
     window.open("https://web.facebook.com/totokalezifoundation/?_rdc=1&_rdr#");
   };
 
-  const toYoutube = () => {};
+  const toYoutube = () => {
+    window.open("https://www.youtube.com/@elder-evmiriamwairimu-aris6453");
+  };
+
   const toTwitter = () => {
     window.open("https://x.com/totokalezi?s=11");
   };
-  const toInsta = () => {};
+
+  //const toInsta = () => {};
 
   return (
     <footer>
@@ -122,9 +126,9 @@ function Footer() {
                 <p>
                   <FontAwesomeIcon icon={faXTwitter} onClick={toTwitter} />
                 </p>
-                <p>
+                {/* <p>
                   <FontAwesomeIcon icon={faInstagram} onClick={toInsta} />
-                </p>
+                </p> */}
               </div>
             </div>
             <div className="gallery-section">

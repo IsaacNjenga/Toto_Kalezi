@@ -1,4 +1,4 @@
-import {  faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useNavigate } from "react-router-dom";
@@ -44,11 +44,15 @@ function Navbar() {
     window.open("https://web.facebook.com/totokalezifoundation/?_rdc=1&_rdr#");
   };
 
-  const toYoutube = () => {};
+  const toYoutube = () => {
+    window.open("https://www.youtube.com/@elder-evmiriamwairimu-aris6453");
+  };
+
   const toTwitter = () => {
     window.open("https://x.com/totokalezi?s=11");
   };
-  const toInsta = () => {};
+
+  // const toInsta = () => {};
 
   const toHome = () => {
     navigate("/");
@@ -91,11 +95,11 @@ function Navbar() {
               className="facebook-icon"
               onClick={toFacebook}
             />
-            <FontAwesomeIcon
+            {/* <FontAwesomeIcon
               icon={faInstagram}
               className="insta-icon"
               onClick={toInsta}
-            />
+            /> */}
           </div>
         </div>
         <nav>
