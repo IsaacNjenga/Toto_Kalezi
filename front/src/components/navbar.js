@@ -1,4 +1,4 @@
-import { faClock, faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import {  faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,7 +11,6 @@ import {
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/navbar.css";
 import logo from "../assets/images/toto_kalezi_logo.png";
-//import logo2 from "../assets/images/toto_logo.png";
 
 function Navbar() {
   const navigate = useNavigate();

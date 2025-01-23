@@ -18,7 +18,7 @@ import pic7 from "../assets/images/gallery_images/7.jpeg";
 import pic8 from "../assets/images/gallery_images/8.jpeg";
 
 import footerbg from "../assets/images/footer-bg.jpeg";
-import { faClock, faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
   faLocationDot,
   faMobile,
