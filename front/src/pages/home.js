@@ -43,6 +43,7 @@ import Florence from "../assets/images/Florence_Ballenger.jpeg";
 import Sharon from "../assets/images/Sharon_Wilhelm.jpeg";
 import Susan from "../assets/images/Susan_Chege.jpeg";
 import Washington from "../assets/images/Susan_Washington.png";
+import Muthoni from "../assets/images/Susan_Muthoni.jpeg";
 
 function Home() {
   const navigate = useNavigate();
@@ -106,27 +107,34 @@ function Home() {
     },
     {
       id: 3,
+      image: Muthoni,
+      title: "Manager",
+      name: "Susan Muthoni",
+      location: "Kenya",
+    },
+    {
+      id: 4,
       image: Florence,
       title: "Manager",
       name: "Florence Ballenger",
       location: "USA",
     },
     {
-      id: 4,
+      id: 5,
       image: Washington,
       title: "Supporting Staff",
       name: "Susan Washington",
       location: "Germany",
     },
     {
-      id: 5,
+      id: 6,
       image: Susan,
       title: "Supporting Staff",
       name: "Susan Chege",
       location: "USA",
     },
     {
-      id: 6,
+      id: 7,
       image: Sharon,
       title: "Supporting Staff",
       name: "Sharon Wilhelm",
@@ -143,8 +151,10 @@ function Home() {
           </div>
           <div className="home-content">
             <div className="home-header">
-              <h1 className="header-title">Toto Kalezi Foundation</h1>
-              <h2 className="header-subtitle">~ To Destiny With Hope ~</h2>
+              <h1 className="header-title">Toto Kalezi</h1>
+              <h2 className="header-subtitle">
+                ~ To Destiny With Hope Foundation ~
+              </h2>
             </div>
           </div>
         </div>
