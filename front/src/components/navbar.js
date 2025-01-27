@@ -6,7 +6,6 @@ import {
   faFacebookF,
   faYoutube,
   faXTwitter,
-  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/navbar.css";

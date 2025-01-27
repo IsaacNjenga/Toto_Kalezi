@@ -3,7 +3,6 @@ import logo from "../assets/images/toto_kalezi_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
-  faInstagram,
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
