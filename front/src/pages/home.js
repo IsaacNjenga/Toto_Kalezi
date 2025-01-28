@@ -2,7 +2,12 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../assets/css/home.css";
-import { infoCard, team, callToAction } from "../assets/data/data";
+import {
+  infoCard,
+  team,
+  callToAction,
+  carouselImages,
+} from "../assets/data/data";
 import donation from "../assets/icons/donation.png";
 
 import supportUs from "../assets/images/gallery_images/42.jpeg";
@@ -15,20 +20,6 @@ import {
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import volunteerImage from "../assets/images/gallery_images/38.jpeg";
-
-import carouselImage1 from "../assets/images/gallery_images/29.jpeg";
-import carouselImage2 from "../assets/images/gallery_images/34.jpeg";
-import carouselImage4 from "../assets/images/gallery_images/3.jpeg";
-import carouselImage3 from "../assets/images/gallery_images/32.jpeg";
-import carouselImage5 from "../assets/images/gallery_images/22.jpeg";
-import carouselImage6 from "../assets/images/gallery_images/5.jpeg";
-import carouselImage7 from "../assets/images/gallery_images/36.jpeg";
-import carouselImage8 from "../assets/images/gallery_images/12.jpeg";
-import carouselImage9 from "../assets/images/gallery_images/8.jpeg";
-import carouselImage10 from "../assets/images/gallery_images/28.jpeg";
-import carouselImage11 from "../assets/images/gallery_images/30.jpeg";
-import carouselImage12 from "../assets/images/gallery_images/13.jpeg";
-import carouselImage13 from "../assets/images/gallery_images/25.jpeg";
 
 function Home() {
   const navigate = useNavigate();
@@ -177,21 +168,7 @@ function Home() {
         <p className="hero-subtitle">Essential contributions</p>
         <div className="image-carousel-container">
           <div className="image-carousel-div">
-            {[
-              carouselImage1,
-              carouselImage2,
-              carouselImage3,
-              carouselImage4,
-              carouselImage5,
-              carouselImage6,
-              carouselImage7,
-              carouselImage8,
-              carouselImage9,
-              carouselImage10,
-              carouselImage11,
-              carouselImage12,
-              carouselImage13,
-            ].map((imgSrc, index) => (
+            {carouselImages.map((imgSrc, index) => (
               <img
                 key={`carousel-img-${index}`}
                 src={imgSrc}
@@ -199,21 +176,7 @@ function Home() {
                 className="image-carousel"
               />
             ))}
-            {[
-              carouselImage1,
-              carouselImage2,
-              carouselImage3,
-              carouselImage4,
-              carouselImage5,
-              carouselImage6,
-              carouselImage7,
-              carouselImage8,
-              carouselImage9,
-              carouselImage10,
-              carouselImage11,
-              carouselImage12,
-              carouselImage13,
-            ].map((imgSrc, index) => (
+            {carouselImages.map((imgSrc, index) => (
               <img
                 key={`carousel-img-${index}`}
                 src={imgSrc}

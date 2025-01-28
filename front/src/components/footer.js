@@ -7,15 +7,6 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
-import pic1 from "../assets/images/gallery_images/1.jpeg";
-import pic2 from "../assets/images/gallery_images/2.jpeg";
-import pic3 from "../assets/images/gallery_images/3.jpeg";
-import pic4 from "../assets/images/gallery_images/4.jpeg";
-import pic5 from "../assets/images/gallery_images/5.jpeg";
-import pic6 from "../assets/images/gallery_images/6.jpeg";
-import pic7 from "../assets/images/gallery_images/7.jpeg";
-import pic8 from "../assets/images/gallery_images/8.jpeg";
-
 import footerbg from "../assets/images/footer-bg.jpeg";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -24,20 +15,10 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/footer.css";
+import { gallery_images } from "../assets/data/data";
 
 function Footer() {
   const [openImage, setOpenImage] = useState(null);
-
-  const gallery_images = [
-    { id: 1, image: pic1 },
-    { id: 2, image: pic2 },
-    { id: 3, image: pic3 },
-    { id: 4, image: pic4 },
-    { id: 5, image: pic5 },
-    { id: 6, image: pic6 },
-    { id: 7, image: pic7 },
-    { id: 8, image: pic8 },
-  ];
 
   const viewImage = (id) => {
     const selectedImage = gallery_images.find((g) => g.id === id);

@@ -112,7 +112,6 @@ function Navbar() {
                   className="logo-image"
                   onClick={toHome}
                 />
-                {/* <p className="logo-text">Toto Kalezi</p> */}
               </div>{" "}
               <div
                 className={`hamburger ${menuOpen ? "active" : ""}`}
