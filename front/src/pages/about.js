@@ -45,11 +45,15 @@ function About() {
               <p>
                 Our mission is to provide street children, the sick, orphans,
                 elderly, and disabled individuals with the support and resources
-                they need to lead better lives. Through education, healthcare,
+                they need to lead better lives. Through meals, education, healthcare,
                 and shelter, we aim to foster a society that is compassionate
                 and inclusive for all.
-                <br /> <strong>Key Focus Areas:</strong>{" "}
+                <br /> <strong>Our Focus Areas:</strong>{" "}
                 <ul>
+                  <li>
+                    Feeding: We are committed to feeding the hungry and the
+                    impoverished within the community{" "}
+                  </li>
                   <li>
                     Education: Empowering individuals with knowledge and skills
                     to break the cycle of poverty
@@ -125,7 +129,7 @@ function About() {
                 Additionally, we have: <br />
                 <ul>
                   <li>
-                    Empowered over 1,000 women and girls through education and
+                    Empowered over 1,000 men and women, young boys and girls through education and
                     vocational training
                   </li>
                   <li>Distributed over 10,000 meals to those in need</li>

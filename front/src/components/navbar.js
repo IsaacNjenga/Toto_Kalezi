@@ -149,12 +149,12 @@ function Navbar() {
                       Give
                     </Link>
                   </li>
-                  {/* <li>
+                  <li>
                     {" "}
-                    <Link to="/causes" className="nav-link">
-                      Causes
+                    <Link to="/gallery" className="nav-link">
+                      Gallery
                     </Link>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
             </div>

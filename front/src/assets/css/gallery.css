@@ -1,0 +1,42 @@
+.gallery-container {
+  position: relative;
+  text-align: center;
+}
+
+.gallery-page-image {
+  position: relative;
+  background: linear-gradient(#44434984, rgba(47, 49, 48, 0.305)),
+    url("../images/gallery_images/55.jpeg") no-repeat center center/cover;
+  padding-bottom: 250px;
+  padding-top: 95px;
+  z-index: 10;
+}
+
+.gallery-content {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.gallery-header {
+  text-align: center; /* Center-align text */
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.gallery-header-subtitle {
+  font-family: "Lora", serif; /* Complimentary serif font */
+  font-size: 1.8rem; /* Slightly smaller than the title */
+  font-weight: 400; /* Regular weight for contrast */
+  color: #f8f3f3; /* A softer, yet matching tone to the title */
+  margin-top: 10pc;
+  letter-spacing: 1.5px; /* Adds spacing for readability */
+  font-style: italic; /* Subtle italic style for elegance */
+}
+
+.gallery-background {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 10px;
+  margin: 15px 30px;
+  border-radius: 12px;
+}
