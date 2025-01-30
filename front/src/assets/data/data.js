@@ -28,18 +28,13 @@ import carouselImage11 from "../images/gallery_images/30.jpeg";
 import carouselImage12 from "../images/gallery_images/13.jpeg";
 import carouselImage13 from "../images/gallery_images/25.jpeg";
 
-import pic1 from "../images/gallery_images/1.jpeg";
 import pic2 from "../images/gallery_images/2.jpeg";
 import pic3 from "../images/gallery_images/25.jpeg";
 import pic4 from "../images/gallery_images/45.jpeg";
 import pic5 from "../images/gallery_images/5.jpeg";
-import pic6 from "../images/gallery_images/26.jpeg";
 import pic8 from "../images/gallery_images/22.jpeg";
-import pic9 from "../images/gallery_images/56.jpeg";
 import pic10 from "../images/gallery_images/55.jpeg";
-import pic11 from "../images/gallery_images/12.jpeg";
 import pic12 from "../images/gallery_images/21.jpeg";
-import pic13 from "../images/gallery_images/26.jpeg";
 
 import picture1 from "../images/gallery_images/1.jpeg";
 import picture2 from "../images/gallery_images/2.jpeg";
@@ -188,18 +183,10 @@ export const allGalleryImages = [
 ];
 
 export const gallery_images = [
-  { id: 1, image: pic1 },
+  { id: 1, image: pic5 },
   { id: 2, image: pic2 },
   { id: 3, image: pic3 },
   { id: 4, image: pic4 },
-  { id: 5, image: pic5 },
-  { id: 6, image: pic6 },
-  { id: 8, image: pic8 },
-  { id: 9, image: pic9 },
-  { id: 10, image: pic10 },
-  { id: 11, image: pic11 },
-  { id: 12, image: pic12 },
-  { id: 13, image: pic13 },
 ];
 
 export const carouselImages = [

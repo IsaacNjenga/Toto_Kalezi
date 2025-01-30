@@ -16,6 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/footer.css";
 import { gallery_images } from "../assets/data/data";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const [openImage, setOpenImage] = useState(null);
@@ -116,15 +117,21 @@ function Footer() {
               <p>Our work at a glance</p>
               <div className="gallery-grid">
                 {gallery_images.map((g) => (
-                  <img
-                    key={g.id}
-                    src={g.image}
-                    alt={g.id}
-                    className="gallery-image"
-                    onClick={() => viewImage(g.id)}
-                  />
+                  <>
+                    {" "}
+                    <img
+                      key={g.id}
+                      src={g.image}
+                      alt={g.id}
+                      className="gallery-image"
+                      onClick={() => viewImage(g.id)}
+                    />
+                  </>
                 ))}
               </div>
+              <Link to="/gallery" style={{ color: "white" }}>
+                View More
+              </Link>
             </div>
           </div>
         </div>

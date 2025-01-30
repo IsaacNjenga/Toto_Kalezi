@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 //import image from "../assets/images/footer-bg.jpeg";
 import "../assets/css/about.css";
 import { Link } from "react-router-dom";
-import { Carousel } from "antd";
+//import { Carousel } from "antd";
 
 import image2 from "../assets/images/gallery_images/12.jpeg";
 import image3 from "../assets/images/gallery_images/15.jpeg";
