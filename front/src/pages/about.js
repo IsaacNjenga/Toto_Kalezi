@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 //import image from "../assets/images/footer-bg.jpeg";
 import "../assets/css/about.css";
 import { Link } from "react-router-dom";
+import { Carousel } from "antd";
 
 import image2 from "../assets/images/gallery_images/12.jpeg";
 import image3 from "../assets/images/gallery_images/15.jpeg";
@@ -38,16 +39,23 @@ function About() {
               <h2>Our Mission</h2>
             </div>
             <div className="mission-content">
-              {" "}
               <div className="image-placeholder">
-                <img src={image2} alt="Our Mission" />
+                <Carousel effect="fade" autoplay autoplaySpeed={2500}>
+                  {[image2, image3, image4].map((img) => (
+                    <img
+                      src={img}
+                      alt={`Slide`}
+                      className="about-modal-image "
+                    />
+                  ))}
+                </Carousel>
               </div>
               <p>
                 Our mission is to provide street children, the sick, orphans,
                 elderly, and disabled individuals with the support and resources
-                they need to lead better lives. Through meals, education, healthcare,
-                and shelter, we aim to foster a society that is compassionate
-                and inclusive for all.
+                they need to lead better lives. Through meals, education,
+                healthcare, and shelter, we aim to foster a society that is
+                compassionate and inclusive for all.
                 <br /> <strong>Our Focus Areas:</strong>{" "}
                 <ul>
                   <li>
@@ -129,8 +137,8 @@ function About() {
                 Additionally, we have: <br />
                 <ul>
                   <li>
-                    Empowered over 1,000 men and women, young boys and girls through education and
-                    vocational training
+                    Empowered over 1,000 men and women, young boys and girls
+                    through education and vocational training
                   </li>
                   <li>Distributed over 10,000 meals to those in need</li>
                   <li>
