@@ -84,6 +84,11 @@
   padding-right: 10px;
 }
 
+.mission-content ul,
+.impact-content ul {
+  padding: 0;
+}
+
 .get-involved-content p {
   font-size: 1.3rem;
   padding: 10px 50px;
@@ -112,7 +117,7 @@
 
 .values-list ul {
   list-style-type: none;
-  padding: 0;
+
   text-align: center;
 }
 
