@@ -78,8 +78,8 @@
 .mission-content p,
 .vision-content p,
 .impact-content p {
-  width: 55%;
-  font-size: 1.1rem;
+  width: 60%;
+  font-size: 1.5rem;
   color: #555;
   padding-right: 10px;
 }
@@ -93,14 +93,16 @@
 .image-placeholder img {
   width: 85%;
   height: auto;
+  max-width: 550px;
   border-radius: 4px;
   transition: transform 0.4s ease-in-out;
 }
 
-.about-modal-image {
+.about-modal-images {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
+  height: auto;
+  max-width: 400px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -174,6 +176,7 @@
   .vision-content p,
   .impact-content p {
     width: 100%;
+    font-size: 1rem;
     margin-bottom: 20px;
   }
 

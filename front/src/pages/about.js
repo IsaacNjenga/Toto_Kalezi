@@ -40,26 +40,30 @@ function About() {
             </div>
             <div className="mission-content">
               <div className="image-placeholder">
-                <Carousel effect="fade" autoplay autoplaySpeed={2500}>
+                {" "}
+                <img src={image2} alt={`Slide`} />
+                {/* <Carousel effect="fade" autoplay autoplaySpeed={2500}>
                   {[image2, image3, image4].map((img) => (
-                    <img
-                      src={img}
-                      alt={`Slide`}
-                      className="about-modal-image "
-                    />
+                    <div className="image-placeholder">
+                      <img
+                        src={img}
+                        alt={`Slide`}
+                      />
+                    </div>
                   ))}
-                </Carousel>
+                </Carousel> */}
               </div>
               <p>
                 Our mission is to provide street children, the sick, orphans,
                 elderly, and disabled individuals with the support and resources
-                they need to lead better lives. Through meals, education,
-                healthcare, and shelter, we aim to foster a society that is
-                compassionate and inclusive for all.
+                they need to lead better lives. Through healthy meals,
+                empowering education, quality healthcare, and adequate shelter,
+                we aim to foster a society that is compassionate and inclusive
+                for all.
                 <br /> <strong>Our Focus Areas:</strong>{" "}
                 <ul>
                   <li>
-                    Feeding: We are committed to feeding the hungry and the
+                    Nourishment: We are committed to feeding the hungry and the
                     impoverished within the community{" "}
                   </li>
                   <li>
