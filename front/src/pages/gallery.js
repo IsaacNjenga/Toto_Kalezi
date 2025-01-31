@@ -52,13 +52,13 @@ function Gallery() {
               </Col>
             ))}
             {allGalleryImages.map((image) => (
-              <Col xs={15} sm={12} md={9} lg={4} key={image.id}>
+              <Col xs={12} sm={20} md={30} lg={6} key={image.id}>
                 <Image
                   src={image.picture}
                   alt={`Gallery-${image.id}`}
                   style={{
                     width: "100%",
-                    height: "400px",
+                    height: "350px",
                     borderRadius: "7px",
                     cursor: "pointer",
                     objectFit: "cover",

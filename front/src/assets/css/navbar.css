@@ -281,7 +281,7 @@
   .hamburger {
     display: flex;
     align-self: flex-end;
-    margin-bottom: 38px;
+    margin-bottom: 32px;
     margin-right: 12px;
     align-items: center;
   }
