@@ -58,7 +58,7 @@ function Gallery() {
                   alt={`Gallery-${image.id}`}
                   style={{
                     width: "100%",
-                    height: "250px",
+                    height: "400px",
                     borderRadius: "7px",
                     cursor: "pointer",
                     objectFit: "cover",

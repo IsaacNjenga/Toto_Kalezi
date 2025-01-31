@@ -281,9 +281,17 @@
   .hamburger {
     display: flex;
     align-self: flex-end;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
     margin-right: 12px;
     align-items: center;
+  }
+
+  .hamburger div {
+    background-color: white;
+  }
+
+  .hamburger.scrolled {
+    color: black;
   }
 
   .nav-links,
