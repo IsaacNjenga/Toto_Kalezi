@@ -3,6 +3,7 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../assets/css/donate.css";
 import { useLocation } from "react-router-dom";
+import { FloatButton } from "antd";
 
 function Donate() {
   const location = useLocation();
@@ -36,6 +37,11 @@ function Donate() {
 
   return (
     <>
+      <>
+        <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
+          <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
+        </FloatButton.Group>
+      </>
       <div className="donate-page-container">
         <div className="donate-page-image">
           <div className="navbar-element">

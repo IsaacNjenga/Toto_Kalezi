@@ -2,10 +2,14 @@ import React from "react";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import "../assets/css/causes.css";
-
+import { FloatButton } from "antd";
 function Causes() {
   return (
-    <>
+    <><>
+    <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
+      <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
+    </FloatButton.Group>
+  </>
       <Navbar />
       <div className="causes-page">
         {/* Hero Section */}

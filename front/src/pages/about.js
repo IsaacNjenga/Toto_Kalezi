@@ -9,10 +9,16 @@ import { Link } from "react-router-dom";
 import image2 from "../assets/images/gallery_images/12.jpeg";
 import image3 from "../assets/images/gallery_images/15.jpeg";
 import image4 from "../assets/images/gallery_images/19.jpeg";
+import { FloatButton } from "antd";
 
 function About() {
   return (
     <>
+      <>
+        <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
+          <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
+        </FloatButton.Group>
+      </>
       <div className="about-us-container">
         <div className="about-us-image">
           <div className="navbar-element">

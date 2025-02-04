@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import "../assets/css/contact.css"; // Link to the CSS file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FloatButton } from "antd";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -25,6 +26,11 @@ function Contact() {
   return (
     <>
       {" "}
+      <>
+        <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
+          <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
+        </FloatButton.Group>
+      </>
       <div className="contact-container">
         <div className="contact-image">
           <div className="navbar-element">

@@ -20,11 +20,17 @@ import {
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import volunteerImage from "../assets/images/gallery_images/38.jpeg";
+import { FloatButton } from "antd";
 
 function Home() {
   const navigate = useNavigate();
   return (
     <>
+      <>
+        <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
+          <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
+        </FloatButton.Group>
+      </>
       <div className="home-container">
         <div className="home-image">
           <div className="navbar-element">

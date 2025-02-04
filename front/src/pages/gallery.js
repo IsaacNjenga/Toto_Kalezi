@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Image } from "antd";
+import { Row, Col, Image, FloatButton } from "antd";
 import Navbar from "../components/navbar";
 import { allGalleryImages, galleryVideos } from "../assets/data/data";
 import "../assets/css/gallery.css";
@@ -17,6 +17,11 @@ function Gallery() {
 
   return (
     <>
+      <>
+        <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
+          <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
+        </FloatButton.Group>
+      </>
       <div className="gallery-container">
         <div className="gallery-page-image">
           <div className="navbar-element">
