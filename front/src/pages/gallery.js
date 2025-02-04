@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Image, FloatButton } from "antd";
+import { Row, Col, Image, FloatButton, Badge } from "antd";
 import Navbar from "../components/navbar";
 import { allGalleryImages, galleryVideos } from "../assets/data/data";
 import "../assets/css/gallery.css";
@@ -58,18 +58,25 @@ function Gallery() {
             ))}
             {allGalleryImages.map((image) => (
               <Col xs={12} sm={20} md={30} lg={6} key={image.id}>
-                <Image
-                  src={image.picture}
-                  alt={`Gallery-${image.id}`}
-                  style={{
-                    width: "100%",
-                    height: "350px",
-                    borderRadius: "7px",
-                    cursor: "pointer",
-                    objectFit: "cover",
-                  }}
-                  //onClick={() => showMedia(image.picture)}
-                />
+                <div style={{ position: "relative", display: "inline-block" }}>
+                  <Badge.Ribbon
+                    text={image.banner}
+                    color="#8942a0"
+                    style={{ position: "absolute", top: 1, right: 1 }}
+                  >
+                    <Image
+                      src={image.picture}
+                      alt={`Gallery-${image.id}`}
+                      style={{
+                        width: "100%",
+                        height: "350px",
+                        borderRadius: "7px",
+                        cursor: "pointer",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Badge.Ribbon>
+                </div>
               </Col>
             ))}
           </Row>

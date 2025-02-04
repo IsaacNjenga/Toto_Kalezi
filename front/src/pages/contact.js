@@ -20,6 +20,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormData({ name: "", email: "", message: "" });
     alert("Thank you for reaching out to us!");
   };
 
