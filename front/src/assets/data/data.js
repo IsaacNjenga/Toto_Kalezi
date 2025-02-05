@@ -96,6 +96,8 @@ import picture57 from "../images/gallery_images/57.jpeg";
 import picture58 from "../images/gallery_images/58.jpeg";
 import picture59 from "../images/gallery_images/59.jpeg";
 import picture60 from "../images/gallery_images/60.jpeg";
+import picture61 from "../images/gallery_images/61.jpeg";
+import picture62 from "../images/gallery_images/62.jpeg";
 
 import video1 from "../images/videos/1.mp4";
 import video2 from "../images/videos/2.mp4";
@@ -178,6 +180,8 @@ export const allGalleryImages = [
   { id: 58, picture: picture58, banner: "" },
   { id: 59, picture: picture59, banner: "" },
   { id: 60, picture: picture60, banner: "" },
+  { id: 61, picture: picture61, banner: "" },
+  { id: 62, picture: picture62, banner: "" },
 ];
 
 export const gallery_images = [
