@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../assets/css/navbar.css";
-import logo from "../assets/images/toto_kalezi_logo.png";
+import logo from "../assets/images/new_logo3.PNG";
 
 function Navbar() {
   const navigate = useNavigate();

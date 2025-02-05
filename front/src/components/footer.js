@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/images/toto_kalezi_logo.png";
+import logo from "../assets/images/new_logo3.PNG";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,

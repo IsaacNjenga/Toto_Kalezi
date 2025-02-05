@@ -116,11 +116,20 @@
 .logo {
   display: flex;
   align-items: center;
-  padding-right: 25px;
+  padding-right: 35px;
 }
 
 .logo-image {
-  width: 43%;
+  width: 35%;
+}
+
+
+.logo-image {
+  border-radius: 18px;
+}
+
+.logo-image:hover {
+  cursor: pointer;
 }
 
 .logo-text {
@@ -218,15 +227,6 @@
   width: 100%;
 }
 
-.logo-image {
-  padding: 8px;
-  background-color: rgb(245, 245, 245);
-  border-radius: 18px;
-}
-
-.logo-image:hover {
-  cursor: pointer;
-}
 
 @media (max-width: 768px) {
   .navbar {
@@ -267,11 +267,11 @@
   }
 
   .logo-image {
-    width: 95%; /* Scales down the logo image */
+    width: 45%; /* Scales down the logo image */
   }
 
   .logo {
-    padding-right: 95px;
+    padding-right: 105px;
   }
 
   .top-row {
