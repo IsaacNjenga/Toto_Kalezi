@@ -67,7 +67,7 @@ function Footer() {
               <h2>ALL CONTACTS</h2>
               <p>
                 <FontAwesomeIcon icon={faPhone} className="footer-phone-icon" />{" "}
-                +254-768-96977
+                +254-768-969772
               </p>
               <p>
                 <FontAwesomeIcon icon={faMobile} className="footer-mail-icon" />{" "}
