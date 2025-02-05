@@ -91,7 +91,7 @@ function Footer() {
                   icon={faLocationDot}
                   className="footer-phone-icon"
                 />
-                Kahawa Sukari, Nairobi, Kenya
+                Mutonya, Eastern Bypass, Ruiru, Kiambu, Kenya
               </p>
             </div>
             <div className="socials-footer">

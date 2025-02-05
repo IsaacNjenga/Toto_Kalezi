@@ -54,7 +54,7 @@ function Contact() {
           <section className="contact-form-info">
             <div className="contact-item">
               <h2>Our Location</h2>
-              <p>Kahawa Sukari, Nairobi, Kenya</p>
+              <p>Mutonya, Eastern Bypass, Ruiru, Kiambu, Kenya</p>
             </div>
             <div className="contact-item">
               <h2>Phone</h2>
