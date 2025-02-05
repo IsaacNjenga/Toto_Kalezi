@@ -213,7 +213,7 @@ export const team = [
     image: Miriam,
     title: "Director",
     name: "Miriam Wairimu K",
-    location: "Kenya",
+    location: "Kenya/USA",
   },
   {
     id: 2,
