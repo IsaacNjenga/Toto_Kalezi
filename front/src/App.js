@@ -5,6 +5,8 @@ import About from "./pages/about";
 import Donate from "./pages/donate";
 import Causes from "./pages/causes";
 import Gallery from "./pages/gallery";
+import Success from "./pages/success";
+import Cancel from "./pages/cancel";
 function App() {
   return (
     <>
@@ -16,6 +18,8 @@ function App() {
           <Route path="/give" element={<Donate />} />
           <Route path="/causes" element={<Causes />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
         </Routes>
       </BrowserRouter>
     </>
