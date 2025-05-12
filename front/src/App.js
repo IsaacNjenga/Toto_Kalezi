@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
 import About from "./pages/about";
@@ -7,10 +7,11 @@ import Causes from "./pages/causes";
 import Gallery from "./pages/gallery";
 import Success from "./pages/success";
 import Cancel from "./pages/cancel";
+import { AnimatePresence } from "framer-motion";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -21,7 +22,7 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
         </Routes>
-      </BrowserRouter>
+      </AnimatePresence>
     </>
   );
 }

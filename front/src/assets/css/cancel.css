@@ -1,0 +1,18 @@
+.cancel-page-bg {
+  position: relative;
+  background: linear-gradient(#60606565, rgba(49, 59, 52, 0.234)),
+    url("../images/gallery_images/61.jpeg") no-repeat center center/cover;
+  padding-bottom: 250px;
+  padding-top: 150px;
+  z-index: 10;
+}
+
+.cancel-container {
+  position: relative;
+  text-align: center;
+}
+
+.cancel-content {
+  padding: 5px;
+  margin: 55px auto;
+}
