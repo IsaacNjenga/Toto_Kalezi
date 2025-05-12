@@ -21,13 +21,13 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import volunteerImage from "../assets/images/gallery_images/38.jpeg";
 import { FloatButton } from "antd";
-import Motion from "../components/motion";
+import CardMotion from "../components/motion";
 
 function Home() {
   const navigate = useNavigate();
   return (
     <>
-      <Motion>
+      <CardMotion>
         <>
           <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
             <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
@@ -251,7 +251,7 @@ function Home() {
           </div>
         </div>
         <Footer />
-      </Motion>
+      </CardMotion>
     </>
   );
 }

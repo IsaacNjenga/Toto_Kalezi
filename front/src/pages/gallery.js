@@ -4,7 +4,7 @@ import Navbar from "../components/navbar";
 import { allGalleryImages, galleryVideos } from "../assets/data/data";
 import "../assets/css/gallery.css";
 import Footer from "../components/footer";
-import Motion from "../components/motion";
+import ZoomMotion from "../components/motion";
 
 function Gallery() {
   // const [isModalVisible, setIsModalVisible] = useState(false);
@@ -18,7 +18,7 @@ function Gallery() {
 
   return (
     <>
-      <Motion>
+      <ZoomMotion>
         <>
           <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
             <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
@@ -107,7 +107,7 @@ function Gallery() {
           </div>
         </div>
         <Footer />
-      </Motion>
+      </ZoomMotion>
     </>
   );
 }

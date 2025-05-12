@@ -5,7 +5,7 @@ import "../assets/css/contact.css"; // Link to the CSS file
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FloatButton } from "antd";
-import Motion from "../components/motion";
+import MobileMotion from "../components/motion/mobileMotion";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -28,7 +28,7 @@ function Contact() {
   return (
     <>
       {" "}
-      <Motion>
+      <MobileMotion>
         <>
           <FloatButton.Group shape="circle" style={{ insetInlineEnd: 24 }}>
             <FloatButton.BackTop visibilityHeight={0} title="Back to top" />
@@ -164,7 +164,7 @@ function Contact() {
           </div>
         </div>
         <Footer />
-      </Motion>
+      </MobileMotion>
     </>
   );
 }
