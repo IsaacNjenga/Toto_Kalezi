@@ -1,0 +1,354 @@
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(235, 22, 22, 0);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  /* border-radius: 10px; */
+}
+
+.navbar.scrolled {
+  background:linear-gradient(to right, #f9fafc 0%, #f1f5f8 100%);  
+  color: #000000;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.navbar .additional-info {
+  opacity: 1;
+  max-height: 100px; /* Set a height limit */
+  overflow: hidden;
+  transition:
+    opacity 0.3s ease-out,
+    max-height 0.3s ease-out;
+}
+
+.navbar.scrolled .additional-info {
+  opacity: 0;
+  max-height: 0; /* Smoothly collapses the section */
+  pointer-events: none;
+}
+
+.additional-info {
+  background: linear-gradient(
+    to left,
+    rgba(209, 212, 23, 0.274),
+    rgba(42, 10, 170, 0.508)
+  );
+  display: flex;
+  justify-content: space-between; /* Aligns text on the left and icons on the right */
+  align-items: center; /* Vertically aligns items */
+  padding: 0 30px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.info-text p {
+  margin-left: 5px;
+  margin-right: 10px;
+  color: white;
+}
+.additional-info-icons {
+  font-size: 1rem;
+  display: flex;
+  gap: 15px; /* Adds consistent spacing between icons */
+}
+
+.mail-icon,
+.clock-icon,
+.phone-icon {
+  padding-right: 2px;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
+
+.additional-info-icons:hover {
+  cursor: pointer;
+}
+
+/* .phone-icon {
+  font-size: 1rem;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 5px;
+  vertical-align: middle;
+} */
+
+.facebook-icon {
+  color: white;
+  background-color: #316ff6;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.youtube-icon {
+  color: red;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.twitter-icon {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.insta-icon {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(58, 187, 54, 0);
+  padding: 10px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding-right: 35px;
+}
+
+.logo-image {
+  width: 45%;
+}
+
+.navbar.scrolled .logo-image {
+  width: 25%;
+  transition: width 0.3s ease;
+}
+
+.logo-image {
+  border-radius: 18px;
+}
+
+.logo-image:hover {
+  cursor: pointer;
+}
+
+.logo-text {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.nav-links ul {
+  padding: 0;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar.scrolled .nav-link {
+  color: #333;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  transition: scale(1.2);
+}
+
+.contact-info {
+  color: #333;
+  display: flex;
+  margin-left: 40px;
+  flex-direction: row;
+  padding-left: 15px;
+  gap: 50px;
+}
+
+.contact-info p {
+  display: block;
+  background-color: green;
+  padding-left: 60px;
+}
+
+.navbar-donate-btn {
+  margin: auto;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #009921;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-donate-btn:hover {
+  background-color: #007b1c;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 4px 0;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+.navbar.scrolled .hamburger div {
+  background-color: black;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    margin: 12px 5px;
+    padding: 1px 20px;
+    background-color: rgba(181, 165, 165, 0.33); /* Ensures visibility */
+  }
+
+  .additional-info {
+    align-items: flex-start;
+    padding: 10px;
+    gap: 2px; /* Adds spacing between sections */
+  }
+
+  .info-text {
+    flex-direction: column;
+    gap: 5px; /* Adds spacing between text items */
+  }
+
+  .additional-info-icons {
+    justify-content: flex-start;
+    gap: 5px; /* Reduces spacing between icons */
+    font-size: 0.9rem; /* Scales down icons slightly */
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .logo {
+    flex: 1;
+    text-align: left;
+    margin-right: 18px;
+  }
+
+  .logo-image {
+    width: 45%; /* Scales down the logo image */
+  }
+
+  .logo {
+    padding-right: 105px;
+  }
+
+  .top-row {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 32px;
+    margin-right: 12px;
+    align-items: center;
+  }
+
+  .hamburger div {
+    background-color: white;
+  }
+
+  .hamburger.scrolled {
+    color: black;
+  }
+
+  .nav-links,
+  .nav-link,
+  .contact-info,
+  .additional-info {
+    display: none;
+  }
+
+  .links.active .nav-links {
+    display: flex;
+    margin-top: 10px;
+  }
+
+  .links.active .nav-link {
+    display: flex;
+  }
+
+  .links.active .additional-info-icons {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between links */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav-links li {
+    width: 100%; /* Makes links easier to tap */
+    text-align: center; /* Centers text */
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; /* Adds spacing between contact details */
+    font-size: 0.9rem; /* Scales down the text */
+  }
+
+  .navbar-donate-btn {
+    width: 100%; /* Makes the button full-width */
+    text-align: center;
+    padding: 10px; /* Adjusts padding for smaller screens */
+    font-size: 1rem;
+  }
+}
