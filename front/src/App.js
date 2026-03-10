@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
 import About from "./pages/about";
@@ -8,17 +8,24 @@ import Gallery from "./pages/gallery";
 import Success from "./pages/success";
 import Cancel from "./pages/cancel";
 import { AnimatePresence } from "framer-motion";
+import Navbar from "./components/navbar";
+import ScrollToTop from "./components/ScrollToTop";
+
 function App() {
+  const location = useLocation();
   return (
     <>
+      <ScrollToTop />
       <AnimatePresence mode="wait">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/give" element={<Donate />} />
-          <Route path="/causes" element={<Causes />} />
-          <Route path="/gallery" element={<Gallery />} />
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Navbar />}>
+            <Route index element={<Home />} />{" "}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/donate" element={<Donate />} />
+            <Route path="/causes" element={<Causes />} />
+            <Route path="/gallery" element={<Gallery />} />
+          </Route>
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
         </Routes>

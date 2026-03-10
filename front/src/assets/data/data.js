@@ -107,6 +107,16 @@ import video5 from "../images/videos/5.mp4";
 import video6 from "../images/videos/6.mp4";
 import video7 from "../images/videos/7.mp4";
 import video8 from "../images/videos/8.mp4";
+import {
+  BookOutlined,
+  GiftOutlined,
+  HeartOutlined,
+  HomeOutlined,
+  MedicineBoxOutlined,
+  StarOutlined,
+  TeamOutlined,
+  ThunderboltOutlined,
+} from "@ant-design/icons";
 
 export const galleryVideos = [
   { id: 1, video: video1 },
@@ -303,4 +313,59 @@ export const callToAction = [
     title: "Free Volunteering",
     text: "Your time and skills can make a significant difference. Volunteer with us to support underprivileged communities, participate in impactful projects, and experience the joy of giving back—all at no cost to you.",
   },
+];
+
+export const focusAreas = [
+  {
+    icon: <GiftOutlined />,
+    label: "Nourishment",
+    desc: "Feeding the hungry and impoverished within the community.",
+  },
+  {
+    icon: <BookOutlined />,
+    label: "Education",
+    desc: "Empowering individuals with knowledge to break the cycle of poverty.",
+  },
+  {
+    icon: <MedicineBoxOutlined />,
+    label: "Healthcare",
+    desc: "Providing access to quality medical care and promoting well-being.",
+  },
+  {
+    icon: <HomeOutlined />,
+    label: "Shelter",
+    desc: "Offering safe and secure living environments for those in need.",
+  },
+];
+
+export const values = [
+  {
+    icon: <HeartOutlined />,
+    label: "Compassion",
+    desc: "Driven by empathy and the desire to improve lives.",
+  },
+  {
+    icon: <StarOutlined />,
+    label: "Integrity",
+    desc: "Committed to honesty, transparency, and accountability.",
+  },
+  {
+    icon: <TeamOutlined />,
+    label: "Collaboration",
+    desc: "Working together with organizations to maximize impact.",
+  },
+  {
+    icon: <ThunderboltOutlined />,
+    label: "Empowerment",
+    desc: "Helping vulnerable individuals take control of their lives.",
+  },
+];
+
+export const impactStats = [
+  { value: "500+", label: "Children sheltered" },
+  { value: "300+", label: "Healthcare beneficiaries" },
+  { value: "1,000+", label: "Educated & trained" },
+  { value: "10,000+", label: "Meals distributed" },
+  { value: "200+", label: "Families supported" },
+  { value: "100+", label: "Businesses supported" },
 ];
