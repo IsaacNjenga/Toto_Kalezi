@@ -11,6 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/navbar";
 import ScrollToTop from "./components/ScrollToTop";
 import axios from "axios";
+import AlbumPage from "./pages/albumPage";
 
 const url = process.env.REACT_APP_API_URL;
 
@@ -31,6 +32,7 @@ function App() {
             <Route path="/donate" element={<Donate />} />
             <Route path="/causes" element={<Causes />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/gallery/album/:id" element={<AlbumPage />} />
           </Route>
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />

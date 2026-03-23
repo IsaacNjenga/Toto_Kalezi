@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { Image as AntImage, FloatButton, Spin, Tabs, Tag } from "antd";
+import { Image as AntImage, FloatButton, Tabs, Tag } from "antd";
 import {
   PlayCircleFilled,
   PictureOutlined,
@@ -13,6 +13,7 @@ import { useUser } from "../contexts/UserContext";
 import useFetchWebsite from "../hooks/fetchWebsite";
 import useFetchAllMedia from "../hooks/fetchAllMedia";
 import useFetchAllAlbums from "../hooks/fetchAllAlbums";
+import { useNavigate } from "react-router-dom";
 
 const primary = "#854a9a";
 const dark = "#0a080e";
@@ -300,7 +301,7 @@ function MediaTile({ item }) {
         alt={item.title}
         style={{ width: "100%", borderRadius: 10, display: "block" }}
         wrapperStyle={{ display: "block" }}
-        preview={{ mask: false }}
+        preview={{ mask: true }}
       />
       <div className="g-tile-overlay" style={{ zIndex: 1 }}>
         {item.banner && (
@@ -340,11 +341,13 @@ function MediaTile({ item }) {
 }
 
 function AlbumCard({ album }) {
+  const navigate = useNavigate();
   const count = album.media?.length ?? 0;
   return (
     <div className="g-album">
       <div
         style={{ position: "relative", overflow: "hidden", borderRadius: 14 }}
+        onClick={() => navigate(`/gallery/album/${album._id}`)}
       >
         {album.cover ? (
           <img
@@ -475,7 +478,14 @@ function Gallery() {
     {
       key: "albums",
       label: (
-        <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+        <span
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            color: activeTab ? primary : "#f2f2f288",
+          }}
+        >
           <FolderOutlined /> Albums
           <Tag
             style={{
@@ -484,7 +494,7 @@ function Gallery() {
               padding: "0 6px",
               lineHeight: "18px",
               background: `${primary}22`,
-              color: primary,
+              color: "#ffffff72",
               border: `1px solid ${primary}44`,
             }}
           >
@@ -496,7 +506,14 @@ function Gallery() {
     {
       key: "all",
       label: (
-        <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+        <span
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            color: activeTab ? primary : "#f2f2f288",
+          }}
+        >
           <AppstoreOutlined /> Photos
           <Tag
             style={{
@@ -517,7 +534,14 @@ function Gallery() {
     {
       key: "videos",
       label: (
-        <span style={{ display: "flex", alignItems: "center", gap: 6 }}>
+        <span
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            color: activeTab ? primary : "#f2f2f288",
+          }}
+        >
           <VideoCameraOutlined /> Videos
           <Tag
             style={{
@@ -813,11 +837,14 @@ function Gallery() {
                                 width: "100%",
                                 display: "block",
                                 borderRadius: 12,
+                                height: "100%",
                               }}
                             >
                               <source src={item.url} type="video/mp4" />
                             </video>
-                            <PlayCircleFilled className="g-video-play" />
+                            {!isMobile && (
+                              <PlayCircleFilled className="g-video-play" />
+                            )}
                             <div
                               style={{
                                 position: "absolute",
