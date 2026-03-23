@@ -15,6 +15,7 @@ import Motion from "../components/motion";
 import { useUser } from "../contexts/UserContext";
 import axios from "axios";
 import heroBg from "../assets/images/gallery_images/19.jpeg";
+import useFetchWebsite from "../hooks/fetchWebsite";
 
 // ── Tokens ──────────────────────────────────────────────────────
 const primary = "#854a9a";
@@ -148,8 +149,21 @@ function Donate() {
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [activePreset, setActivePreset] = useState(null);
-  const { isMobile } = useUser();
   const [api, contextHolder] = notification.useNotification();
+  const { isMobile, isImageReady, setIsImageReady } = useUser();
+  const { website, loading: hl } = useFetchWebsite();
+
+  const donateHero = website.find((w) => w.pageName === "Donate");
+
+  // Use an effect to track when the specific hero URL is actually loaded
+  useEffect(() => {
+    if (donateHero?.heroImg) {
+      const img = new Image();
+      img.src = donateHero.heroImg;
+      img.onload = () => setIsImageReady(true);
+    }
+    // eslint-disable-next-line
+  }, [donateHero?.heroImg]);
 
   useEffect(() => {
     if (amountFromButton) {
@@ -217,12 +231,16 @@ function Donate() {
             className="donate-hero-bg"
             style={{
               position: "relative",
-              backgroundImage: `url(${heroBg})`,
+              backgroundImage:
+                hl || !donateHero
+                  ? `url(${heroBg})`
+                  : `url(${donateHero?.heroImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               paddingTop: 180,
               paddingBottom: 140,
               overflow: "hidden",
+              opacity: isImageReady && !loading ? 1 : 0,
               transition: "all 0.6s ease",
             }}
           >
