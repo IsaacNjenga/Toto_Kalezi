@@ -364,10 +364,8 @@ function Gallery() {
     },
   ];
 
-  if (!ml || al)
-    return (
-      <Spin size="large" fullscreen tip="Loading..." color="#fff" />
-    );
+  if (ml || al)
+    return <Spin size="large" fullscreen tip="Loading..." color="#fff" />;
 
   return (
     <>
