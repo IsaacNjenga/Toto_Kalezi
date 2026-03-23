@@ -3,19 +3,23 @@ import { useLocation } from "react-router-dom";
 import { FloatButton, Form, Input, Button, notification, Row, Col } from "antd";
 import {
   PhoneOutlined,
-  DollarOutlined,
   HeartOutlined,
+  UserOutlined,
   HeartFilled,
   SafetyCertificateOutlined,
   ThunderboltOutlined,
   TeamOutlined,
   GiftOutlined,
+  CreditCardOutlined,
+  MailOutlined,
 } from "@ant-design/icons";
 import Motion from "../components/motion";
 import { useUser } from "../contexts/UserContext";
 import axios from "axios";
 import heroBg from "../assets/images/gallery_images/19.jpeg";
 import useFetchWebsite from "../hooks/fetchWebsite";
+
+const { TextArea } = Input;
 
 // ── Tokens ──────────────────────────────────────────────────────
 const primary = "#854a9a";
@@ -82,6 +86,11 @@ const globalStyles = `
     color: rgba(133,74,154,0.7) !important;
     margin-right: 10px !important;
   }
+  
+  .donate-form-wrap .ant-form-item-extra {
+    color: rgba(255, 255, 255, 0.29) !important;
+  }
+  
   .donate-form-wrap .ant-form-item-explain-error {
     font-family: 'Outfit', sans-serif !important;
     font-size: 12px !important;
@@ -181,11 +190,9 @@ function Donate() {
   const handleFinish = async (values) => {
     setLoading(true);
     try {
-      const res = await axios.post(
-        "http://localhost:3001/TotoKalezi/donate",
-        values,
-        { headers: { "Content-Type": "application/json" } },
-      );
+      const res = await axios.post("donate", values, {
+        headers: { "Content-Type": "application/json" },
+      });
       if (res.data.success) {
         api.success({
           message: "Thank you for your generosity!",
@@ -327,14 +334,14 @@ function Donate() {
           {/* ── MAIN CONTENT ──────────────────────────────────── */}
           <div
             style={{
-              maxWidth: 1060,
+              maxWidth: 1100,
               margin: "0 auto",
-              padding: isMobile ? "24px 16px 64px" : "32px 40px 80px",
+              padding: isMobile ? "24px 16px 64px" : "32px 20px 40px",
             }}
           >
             <Row gutter={[40, 32]} align="top">
               {/* ── LEFT: Impact + Trust ── */}
-              <Col xs={24} lg={10}>
+              <Col xs={24} lg={8}>
                 {/* Impact section */}
                 <div
                   style={{
@@ -497,7 +504,7 @@ function Donate() {
               </Col>
 
               {/* ── RIGHT: Donation Form ── */}
-              <Col xs={24} lg={14}>
+              <Col xs={24} lg={16}>
                 <div
                   ref={formRef}
                   style={{
@@ -656,6 +663,46 @@ function Donate() {
                       className="donate-form-wrap"
                       requiredMark={false}
                     >
+                      <Row gutter={[20, 20]}>
+                        <Col xs={24} md={12}>
+                          <Form.Item
+                            label="Your Name"
+                            name="name"
+                            rules={[
+                              {
+                                required: true,
+                                message: "Your name is required",
+                              },
+                            ]}
+                          >
+                            <Input
+                              prefix={<UserOutlined />}
+                              placeholder="John Doe"
+                              size="large"
+                            />
+                          </Form.Item>
+                        </Col>
+                        <Col xs={24} md={12}>
+                          <Form.Item
+                            label="Your Email Address"
+                            name="email"
+                            rules={[
+                              {
+                                required: true,
+                                message: "Your email is required",
+                              },
+                            ]}
+                            extra="We'll use this to contact you"
+                          >
+                            <Input
+                              prefix={<MailOutlined />}
+                              placeholder="John.doe@example.com"
+                              size="large"
+                            />
+                          </Form.Item>
+                        </Col>
+                      </Row>
+
                       <Form.Item
                         label="Phone Number"
                         name="phone_number"
@@ -691,11 +738,23 @@ function Donate() {
                         ]}
                       >
                         <Input
-                          prefix={<DollarOutlined />}
+                          prefix={<CreditCardOutlined />}
                           placeholder="e.g. 500"
                           type="number"
                           size="large"
                           onChange={() => setActivePreset(null)}
+                        />
+                      </Form.Item>
+
+                      <Form.Item
+                        label="Your Message"
+                        name="message"
+                        extra="An inspiring message goes a long way"
+                      >
+                        <TextArea
+                          placeholder="Your message goes here..."
+                          size="large"
+                          rows={4}
                         />
                       </Form.Item>
 
