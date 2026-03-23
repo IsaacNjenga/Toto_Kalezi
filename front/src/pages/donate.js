@@ -223,6 +223,7 @@ function Donate() {
               paddingTop: 180,
               paddingBottom: 140,
               overflow: "hidden",
+              transition: "all 0.6s ease",
             }}
           >
             <div

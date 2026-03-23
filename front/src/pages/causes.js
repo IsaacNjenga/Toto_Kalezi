@@ -246,6 +246,7 @@ function Causes() {
               paddingBottom: 160,
               overflow: "hidden",
               opacity: isImageReady && !loading ? 1 : 0,
+              transition: "all 0.6s ease",
             }}
           >
             <div

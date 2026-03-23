@@ -199,6 +199,7 @@ function Home() {
               paddingBottom: 220,
               overflow: "hidden",
               opacity: isImageReady && !loading ? 1 : 0,
+              transition: "all 0.6s ease",
             }}
           >
             {/* Dark + purple overlay */}
