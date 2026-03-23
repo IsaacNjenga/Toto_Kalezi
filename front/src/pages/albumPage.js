@@ -360,38 +360,6 @@ function AlbumPage() {
               animation: "heroFadeUp 0.8s ease both",
             }}
           >
-            {banners.length > 0 && (
-              <div
-                style={{
-                  display: "flex",
-                  gap: 6,
-                  flexWrap: "wrap",
-                  marginBottom: 14,
-                }}
-              >
-                {banners.slice(0, 5).map((b) => (
-                  <span
-                    key={b}
-                    style={{
-                      fontFamily: "'Outfit', sans-serif",
-                      fontSize: 9,
-                      fontWeight: 700,
-                      letterSpacing: "0.1em",
-                      textTransform: "uppercase",
-                      padding: "2px 10px",
-                      borderRadius: 20,
-                      background: "rgba(133,74,154,0.28)",
-                      backdropFilter: "blur(6px)",
-                      border: "1px solid rgba(133,74,154,0.4)",
-                      color: "#d4a8e8",
-                    }}
-                  >
-                    {b}
-                  </span>
-                ))}
-              </div>
-            )}
-
             <h1
               className="ap-hero-title"
               style={{
@@ -413,9 +381,11 @@ function AlbumPage() {
                   fontFamily: "'Outfit', sans-serif",
                   fontSize: isMobile ? 12 : 14,
                   color: "rgba(255,255,255,0.45)",
-                  margin: "0 0 22px",
-                  maxWidth: 560,
+                  margin: "10px 0 22px",
+                  maxWidth: 860,
+                  maxHeight: 5,
                   lineHeight: 1.6,
+                  ellipsis: "-webkit-auto",
                 }}
               >
                 {album.description}
