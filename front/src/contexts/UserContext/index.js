@@ -8,6 +8,7 @@ export const useUser = () => {
 
 export function UserProvider({ children }) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isImageReady, setIsImageReady] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -15,7 +16,7 @@ export function UserProvider({ children }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const value = { isMobile };
-  
+  const value = { isMobile, isImageReady, setIsImageReady };
+
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }

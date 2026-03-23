@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   infoCard,
   team,
@@ -20,6 +20,7 @@ import { Card, Col, FloatButton, Row } from "antd";
 import CardMotion from "../components/motion";
 import homeBg from "../assets/images/home-bg.jpeg";
 import { useUser } from "../contexts/UserContext";
+import useFetchWebsite from "../hooks/fetchWebsite";
 
 // ── Design tokens ──────────────────────────────────────────────
 const primary = "#854a9a";
@@ -150,9 +151,22 @@ function SectionLabel({ children }) {
 // ── Main Component ──────────────────────────────────────────────
 function Home() {
   const navigate = useNavigate();
-  const { isMobile } = useUser();
+  const { isMobile, isImageReady, setIsImageReady } = useUser();
+  const { website, loading } = useFetchWebsite();
+
+  const homeHero = website.find((w) => w.pageName === "Home");
 
   const donationAmounts = [10, 20, 50, 100, 150];
+
+  // Use an effect to track when the specific hero URL is actually loaded
+  useEffect(() => {
+    if (homeHero?.heroImg) {
+      const img = new Image();
+      img.src = homeHero.heroImg;
+      img.onload = () => setIsImageReady(true);
+    }
+    // eslint-disable-next-line
+  }, [homeHero?.heroImg]);
 
   return (
     <>
@@ -175,12 +189,16 @@ function Home() {
           <div
             style={{
               position: "relative",
-              backgroundImage: `url(${homeBg})`,
+              backgroundImage:
+                loading || !homeHero
+                  ? `url(${homeBg})`
+                  : `url(${homeHero?.heroImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               paddingTop: 220,
               paddingBottom: 220,
               overflow: "hidden",
+              opacity: isImageReady && !loading ? 1 : 0,
             }}
           >
             {/* Dark + purple overlay */}
@@ -199,7 +217,8 @@ function Home() {
                 left: 0,
                 right: 0,
                 height: 120,
-                background: "linear-gradient(to bottom, transparent, #f5f3f7)",
+                background:
+                  "linear-gradient(to bottom, transparent, #f5f3f76a)",
               }}
             />{" "}
             {/* Top accent line */}

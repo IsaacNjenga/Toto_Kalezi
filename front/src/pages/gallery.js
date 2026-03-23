@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Row, Col, Image, FloatButton, Badge, Tabs, Tag } from "antd";
+import React, { useEffect, useState } from "react";
+import { Row, Col, Image as AntImage, FloatButton, Badge, Tabs, Tag } from "antd";
 import {
   PlayCircleOutlined,
   PictureOutlined,
@@ -9,6 +9,7 @@ import { allGalleryImages, galleryVideos } from "../assets/data/data";
 import ZoomMotion from "../components/motion";
 import heroImg from "../assets/images/gallery_images/55.jpeg";
 import { useUser } from "../contexts/UserContext";
+import useFetchWebsite from "../hooks/fetchWebsite";
 
 const primary = "#854a9a";
 const primaryDim = "rgba(133,74,154,0.14)";
@@ -133,7 +134,20 @@ function SectionHeading({ icon, children }) {
 
 function Gallery() {
   const [activeTab, setActiveTab] = useState("all");
-  const { isMobile } = useUser();
+  const { isMobile, isImageReady, setIsImageReady } = useUser();
+  const { website, loading } = useFetchWebsite();
+
+  const galleryHero = website.find((w) => w.pageName === "Gallery");
+
+  // Use an effect to track when the specific hero URL is actually loaded
+  useEffect(() => {
+    if (galleryHero?.heroImg) {
+      const img = new Image();
+      img.src = galleryHero?.heroImg;
+      img.onload = () => setIsImageReady(true);
+    }
+    // eslint-disable-next-line
+  }, [galleryHero?.heroImg]);
 
   // Group images by banner tag for the tab counts
   const bannerGroups = allGalleryImages.reduce((acc, img) => {
@@ -227,12 +241,16 @@ function Gallery() {
           <div
             style={{
               position: "relative",
-              backgroundImage: `url(${heroImg})`,
+              backgroundImage:
+                loading || !galleryHero
+                  ? `url(${heroImg})`
+                  : `url(${galleryHero?.heroImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               paddingTop: 180,
               paddingBottom: 140,
               overflow: "hidden",
+              opacity: isImageReady && !loading ? 1 : 0,
             }}
           >
             {/* Overlay */}
@@ -448,7 +466,7 @@ function Gallery() {
                   </SectionHeading>
 
                   {/* Ant Design Image.PreviewGroup for lightbox */}
-                  <Image.PreviewGroup>
+                  <AntImage.PreviewGroup>
                     <MasonryGrid
                       columns={isMobile ? 2 : 4}
                       gap={isMobile ? 10 : 14}
@@ -467,7 +485,7 @@ function Gallery() {
                           }}
                         >
                           <div className="gallery-img-wrap">
-                            <Image
+                            <AntImage
                               src={image.picture}
                               alt={`Gallery-${image.id}`}
                               style={{
@@ -530,7 +548,7 @@ function Gallery() {
                         </Badge.Ribbon>
                       ))}
                     </MasonryGrid>
-                  </Image.PreviewGroup>
+                  </AntImage.PreviewGroup>
 
                   {filteredImages.length === 0 && (
                     <div

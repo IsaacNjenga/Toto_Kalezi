@@ -10,6 +10,12 @@ import Cancel from "./pages/cancel";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/navbar";
 import ScrollToTop from "./components/ScrollToTop";
+import axios from "axios";
+
+const url = process.env.REACT_APP_API_URL;
+
+axios.defaults.baseURL = url;
+axios.defaults.withCredentials = true;
 
 function App() {
   const location = useLocation();

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FloatButton, Row, Col } from "antd";
 import {
   HeartOutlined,
@@ -21,6 +21,7 @@ import img19 from "../assets/images/gallery_images/19.jpeg";
 import img38 from "../assets/images/gallery_images/38.jpeg";
 import img42 from "../assets/images/gallery_images/42.jpeg";
 import img55 from "../assets/images/gallery_images/55.jpeg";
+import useFetchWebsite from "../hooks/fetchWebsite";
 
 // ── Tokens ──────────────────────────────────────────────────────
 const primary = "#854a9a";
@@ -205,7 +206,20 @@ const stripImages = [img12, img38, img42, img15, img19, img55];
 
 // ── Component ────────────────────────────────────────────────────
 function Causes() {
-  const { isMobile } = useUser();
+  const { isMobile, isImageReady, setIsImageReady } = useUser();
+  const { website, loading } = useFetchWebsite();
+
+  const causesHero = website.find((w) => w.pageName === "Our Cause");
+
+  // Use an effect to track when the specific hero URL is actually loaded
+  useEffect(() => {
+    if (causesHero?.heroImg) {
+      const img = new Image();
+      img.src = causesHero.heroImg;
+      img.onload = () => setIsImageReady(true);
+    }
+    // eslint-disable-next-line
+  }, [causesHero?.heroImg]);
 
   return (
     <>
@@ -222,12 +236,16 @@ function Causes() {
           <div
             style={{
               position: "relative",
-              backgroundImage: `url(${img55})`,
+              backgroundImage:
+                loading || !causesHero
+                  ? `url(${img55})`
+                  : `url(${causesHero?.heroImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               paddingTop: 200,
               paddingBottom: 160,
               overflow: "hidden",
+              opacity: isImageReady && !loading ? 1 : 0,
             }}
           >
             <div

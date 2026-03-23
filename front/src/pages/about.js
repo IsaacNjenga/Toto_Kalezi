@@ -8,6 +8,8 @@ import IconMotion from "../components/motion";
 import heroBg from "../assets/images/gallery_images/18.jpeg";
 import { useUser } from "../contexts/UserContext";
 import { focusAreas, impactStats, values } from "../assets/data/data";
+import useFetchWebsite from "../hooks/fetchWebsite";
+import { useEffect } from "react";
 
 // ── Tokens ──────────────────────────────────────────────────────
 const primary = "#854a9a";
@@ -133,7 +135,20 @@ function SectionCard({ children, style = {} }) {
 
 // ── Main ─────────────────────────────────────────────────────────
 function About() {
-  const { isMobile } = useUser();
+  const { isMobile, isImageReady, setIsImageReady } = useUser();
+  const { website, loading } = useFetchWebsite();
+
+  const aboutHero = website.find((w) => w.pageName === "About");
+
+  // Use an effect to track when the specific hero URL is actually loaded
+  useEffect(() => {
+    if (aboutHero?.heroImg) {
+      const img = new Image();
+      img.src = aboutHero.heroImg;
+      img.onload = () => setIsImageReady(true);
+    }
+    // eslint-disable-next-line
+  }, [aboutHero?.heroImg]);
 
   return (
     <>
@@ -151,12 +166,16 @@ function About() {
             className="about-hero-bg"
             style={{
               position: "relative",
-              backgroundImage: `url(${heroBg})`,
+              backgroundImage:
+                loading || !aboutHero
+                  ? `url(${heroBg})`
+                  : `url(${aboutHero?.heroImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               paddingTop: 180,
               paddingBottom: 140,
               overflow: "hidden",
+              opacity: isImageReady && !loading ? 1 : 0,
             }}
           >
             <div

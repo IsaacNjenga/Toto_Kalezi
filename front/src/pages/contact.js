@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FloatButton, Form, Input, Button, Row, Col, notification } from "antd";
 import {
   MailOutlined,
@@ -17,6 +17,7 @@ import {
 import MobileMotion from "../components/motion/mobileMotion";
 import { useUser } from "../contexts/UserContext";
 import heroBg from "../assets/images/gallery_images/15.jpeg";
+import useFetchWebsite from "../hooks/fetchWebsite";
 
 // ── Tokens ───────────────────────────────────────────────────────
 const primary = "#854a9a";
@@ -150,15 +151,29 @@ function InfoCard({ icon, title, children }) {
 
 // ── Main ─────────────────────────────────────────────────────────
 function Contact() {
-  const { isMobile } = useUser();
   const [form] = Form.useForm();
   const [api, contextHolder] = notification.useNotification();
+  const { isMobile, isImageReady, setIsImageReady } = useUser();
+  const { website, loading } = useFetchWebsite();
+
+  const contactHero = website.find((w) => w.pageName === "Contact Us");
+
+  // Use an effect to track when the specific hero URL is actually loaded
+  useEffect(() => {
+    if (contactHero?.heroImg) {
+      const img = new Image();
+      img.src = contactHero.heroImg;
+      img.onload = () => setIsImageReady(true);
+    }
+    // eslint-disable-next-line
+  }, [contactHero?.heroImg]);
 
   const handleFinish = (values) => {
     console.log(values);
     api.success({
       message: "Message sent!",
-      description: "Thank you for reaching out. We'll get back to you as soon as we can.",
+      description:
+        "Thank you for reaching out. We'll get back to you as soon as we can.",
       placement: "topRight",
       duration: 5,
     });
@@ -182,12 +197,16 @@ function Contact() {
             className="contact-hero-bg"
             style={{
               position: "relative",
-              backgroundImage: `url(${heroBg})`,
+              backgroundImage:
+                loading || !contactHero
+                  ? `url(${heroBg})`
+                  : `url(${contactHero?.heroImg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               paddingTop: 180,
               paddingBottom: 140,
               overflow: "hidden",
+              opacity: isImageReady && !loading ? 1 : 0,
             }}
           >
             <div
