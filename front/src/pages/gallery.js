@@ -77,6 +77,179 @@ const globalStyles = `
   }
 `;
 
+const shimmer = `
+  @keyframes sk-shimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position: 600px 0; }
+  }
+  .sk {
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.09) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 600px 100%;
+    animation: sk-shimmer 1.6s infinite linear;
+  }
+`;
+
+function GallerySkeleton() {
+  return (
+    <>
+      <style>{shimmer}</style>
+      <div style={{ background: dark, minHeight: "100vh" }}>
+        {/* Hero */}
+        <div style={{ position: "relative", height: 420, overflow: "hidden" }}>
+          <div
+            className="sk"
+            style={{ position: "absolute", inset: 0, borderRadius: 0 }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              right: 0,
+              height: 120,
+              background: `linear-gradient(to bottom, transparent, ${dark})`,
+            }}
+          />
+          {/* Title lines */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 80,
+              left: "50%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 12,
+              width: "100%",
+            }}
+          >
+            <div
+              className="sk"
+              style={{ width: 80, height: 10, borderRadius: 20 }}
+            />
+            <div
+              className="sk"
+              style={{
+                width: 360,
+                height: 18,
+                borderRadius: 6,
+                maxWidth: "70%",
+              }}
+            />
+            <div
+              className="sk"
+              style={{
+                width: 260,
+                height: 14,
+                borderRadius: 6,
+                maxWidth: "55%",
+              }}
+            />
+            {/* Stats row */}
+            <div style={{ display: "flex", gap: 48, marginTop: 12 }}>
+              {[1, 2, 3].map((i) => (
+                <div
+                  key={i}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
+                  <div
+                    className="sk"
+                    style={{ width: 48, height: 28, borderRadius: 6 }}
+                  />
+                  <div
+                    className="sk"
+                    style={{ width: 40, height: 9, borderRadius: 20 }}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Section title */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            padding: "44px 40px 0",
+            gap: 12,
+          }}
+        >
+          <div
+            className="sk"
+            style={{ width: 220, height: 22, borderRadius: 6 }}
+          />
+          <div
+            className="sk"
+            style={{ width: 44, height: 3, borderRadius: 2 }}
+          />
+        </div>
+
+        {/* Fake tabs */}
+        <div
+          style={{
+            display: "flex",
+            gap: 24,
+            padding: "28px 40px 0",
+            borderBottom: "1px solid rgba(255,255,255,0.07)",
+          }}
+        >
+          {[80, 70, 60].map((w, i) => (
+            <div
+              key={i}
+              style={{
+                paddingBottom: 14,
+                borderBottom:
+                  i === 0 ? `2px solid ${primary}` : "2px solid transparent",
+              }}
+            >
+              <div
+                className="sk"
+                style={{ width: w, height: 13, borderRadius: 6 }}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Masonry grid */}
+        <div style={{ padding: "28px 40px 80px", display: "flex", gap: 14 }}>
+          {[0, 1, 2].map((col) => (
+            <div
+              key={col}
+              style={{
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                gap: 14,
+              }}
+            >
+              {[180, 240, 160, 210].map((h, i) => (
+                <div
+                  key={i}
+                  className="sk"
+                  style={{
+                    width: "100%",
+                    height: ((h + col * 30 + i * 10) % 140) + 130,
+                    borderRadius: 10,
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
 function Masonry({ items, columns, gap = 14, renderItem }) {
   const cols = Array.from({ length: columns }, () => []);
   items.forEach((item, i) => cols[i % columns].push(item));
@@ -364,8 +537,7 @@ function Gallery() {
     },
   ];
 
-  if (ml || al)
-    return <Spin size="large" fullscreen tip="Loading..." color="#fff" />;
+  if (ml || al) return <GallerySkeleton />;
 
   return (
     <>
